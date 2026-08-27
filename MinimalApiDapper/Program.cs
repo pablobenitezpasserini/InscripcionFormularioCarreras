@@ -6,6 +6,7 @@ using MinimalApiDapper.Services;
 using MinimalApiDapper.Models;
 using Microsoft.AspNetCore.Http;
 using System;
+using Microsoft.Extensions.Configuration;
 
 namespace MinimalApiDapper;
 
@@ -21,12 +22,12 @@ public class Program
         // Habilitar CORS
         builder.Services.AddCors();
 
-    // Learn more about configuring Swagger/OpenAPI at
-    //https://aka.ms/aspnetcore/swashbuckle
+        // Learn more about configuring Swagger/OpenAPI at
+        //https://aka.ms/aspnetcore/swashbuckle
         builder.Services.AddEndpointsApiExplorer();
         builder.Services.AddSwaggerGen();
 
-        string connectionString = "Server=localhost\\SQLEXPRESS;Database=FormularioInscripcionCarreras;Trusted_Connection=True;TrustServerCertificate=True;";
+        string connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
         //string de conexion a la base de datos. Recuerden cambiar el nombre del servidor y la base de datos para que el proyecto funcione
 
         // Add database connection string to the services
@@ -75,7 +76,7 @@ public class Program
 
             if (result.Success) //Esto le devuelve al frontend el archivo de excel, el tipo indicado de documento y el nombre por defecto del archivo
             {
-                return Results.File(result.Data!,"application/vnd.openxmlformats-officedocument.spreadsheetml.sheet","Estudiantes.xlsx");
+                return Results.File(result.Data!, "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", "Estudiantes.xlsx");
             }
 
             return Results.BadRequest(new { message = result.Error });
