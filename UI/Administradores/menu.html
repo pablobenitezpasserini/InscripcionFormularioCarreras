@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Menú del Administrador</title>
+        <link rel="icon" href="../img/administradores/favicon.ico" type="image/ico">
+        <link rel="stylesheet" href="../css/administradores/menu.css">
+    </head>
+    <body>
+        <div class="form-container">
+            <!-- Banner -->
+            <img src="../img/administradores/banner.jpg" alt="Banner principal" class="banner">
+
+            <h2>Menú del Administrador</h2>
+
+            <hr>
+
+            <p style="font-weight: bold;">Seleccione la opción deseada.</p>
+
+            <a href="1-administrador.html">Administrador</a><br><br><br>
+            <a href="2-carrera.html">Carrera</a><br><br><br>
+            <a href="3-informacion-academica.html">Información Académica</a><br><br><br>
+            <a href="4-formulario.html">Formulario</a><br><br><br>
+            <a href="5-listados.html">Listados</a><br><br><br>
+            <a href="6-descargas.html">Descargas</a><br><br>
+
+            <hr>
+
+            <br>
+            <button id="logout">Cerrar sesión</button>
+
+        </div>
+
+        <script>
+            // Verificar sesión
+            if (localStorage.getItem("logueado") !== "true") {
+                alert("⛔ Debe iniciar sesión para acceder al menú.");
+                window.location.href = "admin.html";
+            }
+
+            // Logout
+            document.getElementById("logout").addEventListener("click", () => {
+                localStorage.removeItem("logueado");
+                localStorage.removeItem("usuario");
+                alert("✅ Sesión cerrada correctamente.");
+                window.location.href = "admin.html";
+            });
+        </script>
+    </body>
+</html>

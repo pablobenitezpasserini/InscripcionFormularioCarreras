@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Administración</title>
+        <link rel="icon" href="../img/administradores/favicon.ico" type="image/ico">
+        <link rel="stylesheet" href="../css/administradores/admin.css">
+        <script type="module" src="../js/administradores/admin.js"></script>
+    </head>
+    <body>
+        <div class="form-container">
+            <!-- Banner -->
+            <img src="../img/administradores/banner.jpg" alt="Banner principal" class="banner">
+
+            <!-- Página principal -->
+            <div id="home">
+                <h1>Administración</h1>
+                <hr>
+                <p style="font-weight: bold;">Seleccione la opción deseada.</p>
+                <button id="btnLogin">Iniciar Sesión</button>
+                <button id="btnRegister">Registrarse</button>
+            </div>
+
+            <!-- Formulario Login -->
+            <form id="loginForm" style="display:none;">
+                <h2>Iniciar Sesión</h2>
+                <hr>
+                <p style="font-weight: bold;">Completar todos los campos solicitados.</p>
+                <h3>🛃 Datos de acceso</h3>
+                <hr>
+                <label for="loginUser">&#9679; Nombre de usuario:</label>
+                <input type="text" id="loginUser" placeholder="Ingrese un usuario." required>
+
+                <label for="loginPassword">&#9679; Contraseña:</label>
+                <input type="password" id="loginPassword" placeholder="Ingrese una contraseña." required>
+
+                <button type="submit" id="login">Ingresar</button>
+                <button type="button" id="cancelLogin">Cancelar</button>
+            </form>
+
+            <!-- Formulario Registro -->
+            <form id="registerForm" style="display:none;">
+                <h2>Registrarse</h2>
+                <hr>
+                <p style="font-weight: bold;">Completar todos los campos solicitados.</p>
+                <h3>🛂 Datos para registro</h3>
+                <hr>
+                <label for="regUser">&#9679; Nombre de usuario:</label>
+                <input type="text" id="regUser" placeholder="Ingrese un usuario." required>
+
+                <label for="regPassword">&#9679; Contraseña:</label>
+                <input type="password" id="regPassword" placeholder="Ingrese una contraseña." required>
+            
+                <button type="submit" id="reg">Registrar</button>
+                <button type="button" id="cancelRegister">Cancelar</button>
+            </form>
+            <hr>
+                <p>
+                    <a href="/UI/-/agradecimientos.html" title="Ver agradecimientos" style="text-decoration: none;">
+                        Creado por los alumnos de Tercer año de la TSAS en el 2025.
+                    </a>
+                </p>
+        </div>
+    </body>
+</html>

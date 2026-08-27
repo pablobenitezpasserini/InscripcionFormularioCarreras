@@ -1,0 +1,384 @@
+C:\Algoritmos3\MinimalApiDapper - Optimizado\obj\Debug\net8.0\MinimalApiDapper.csproj.AssemblyReference.cache
+C:\Algoritmos3\MinimalApiDapper - Optimizado\obj\Debug\net8.0\MinimalApiDapper.GeneratedMSBuildEditorConfig.editorconfig
+C:\Algoritmos3\MinimalApiDapper - Optimizado\obj\Debug\net8.0\MinimalApiDapper.AssemblyInfoInputs.cache
+C:\Algoritmos3\MinimalApiDapper - Optimizado\obj\Debug\net8.0\MinimalApiDapper.AssemblyInfo.cs
+C:\Algoritmos3\MinimalApiDapper - Optimizado\obj\Debug\net8.0\MinimalApiDapper.csproj.CoreCompileInputs.cache
+C:\Algoritmos3\MinimalApiDapper - Optimizado\obj\Debug\net8.0\MinimalApiDapper.MvcApplicationPartsAssemblyInfo.cs
+C:\Algoritmos3\MinimalApiDapper - Optimizado\obj\Debug\net8.0\MinimalApiDapper.MvcApplicationPartsAssemblyInfo.cache
+C:\Algoritmos3\MinimalApiDapper - Optimizado\bin\Debug\net8.0\appsettings.Development.json
+C:\Algoritmos3\MinimalApiDapper - Optimizado\bin\Debug\net8.0\appsettings.json
+C:\Algoritmos3\MinimalApiDapper - Optimizado\bin\Debug\net8.0\MinimalApiDapper.exe
+C:\Algoritmos3\MinimalApiDapper - Optimizado\bin\Debug\net8.0\MinimalApiDapper.deps.json
+C:\Algoritmos3\MinimalApiDapper - Optimizado\bin\Debug\net8.0\MinimalApiDapper.runtimeconfig.json
+C:\Algoritmos3\MinimalApiDapper - Optimizado\bin\Debug\net8.0\MinimalApiDapper.dll
+C:\Algoritmos3\MinimalApiDapper - Optimizado\bin\Debug\net8.0\MinimalApiDapper.pdb
+C:\Algoritmos3\MinimalApiDapper - Optimizado\bin\Debug\net8.0\Azure.Core.dll
+C:\Algoritmos3\MinimalApiDapper - Optimizado\bin\Debug\net8.0\Azure.Identity.dll
+C:\Algoritmos3\MinimalApiDapper - Optimizado\bin\Debug\net8.0\Dapper.dll
+C:\Algoritmos3\MinimalApiDapper - Optimizado\bin\Debug\net8.0\Microsoft.AspNetCore.OpenApi.dll
+C:\Algoritmos3\MinimalApiDapper - Optimizado\bin\Debug\net8.0\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Algoritmos3\MinimalApiDapper - Optimizado\bin\Debug\net8.0\Microsoft.Data.SqlClient.dll
+C:\Algoritmos3\MinimalApiDapper - Optimizado\bin\Debug\net8.0\Microsoft.Identity.Client.dll
+C:\Algoritmos3\MinimalApiDapper - Optimizado\bin\Debug\net8.0\Microsoft.Identity.Client.Extensions.Msal.dll
+C:\Algoritmos3\MinimalApiDapper - Optimizado\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Algoritmos3\MinimalApiDapper - Optimizado\bin\Debug\net8.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Algoritmos3\MinimalApiDapper - Optimizado\bin\Debug\net8.0\Microsoft.IdentityModel.Logging.dll
+C:\Algoritmos3\MinimalApiDapper - Optimizado\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.dll
+C:\Algoritmos3\MinimalApiDapper - Optimizado\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Algoritmos3\MinimalApiDapper - Optimizado\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
+C:\Algoritmos3\MinimalApiDapper - Optimizado\bin\Debug\net8.0\Microsoft.OpenApi.dll
+C:\Algoritmos3\MinimalApiDapper - Optimizado\bin\Debug\net8.0\Microsoft.SqlServer.Server.dll
+C:\Algoritmos3\MinimalApiDapper - Optimizado\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Algoritmos3\MinimalApiDapper - Optimizado\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Algoritmos3\MinimalApiDapper - Optimizado\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Algoritmos3\MinimalApiDapper - Optimizado\bin\Debug\net8.0\System.ClientModel.dll
+C:\Algoritmos3\MinimalApiDapper - Optimizado\bin\Debug\net8.0\System.Configuration.ConfigurationManager.dll
+C:\Algoritmos3\MinimalApiDapper - Optimizado\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Algoritmos3\MinimalApiDapper - Optimizado\bin\Debug\net8.0\System.Memory.Data.dll
+C:\Algoritmos3\MinimalApiDapper - Optimizado\bin\Debug\net8.0\System.Runtime.Caching.dll
+C:\Algoritmos3\MinimalApiDapper - Optimizado\bin\Debug\net8.0\System.Security.Cryptography.ProtectedData.dll
+C:\Algoritmos3\MinimalApiDapper - Optimizado\bin\Debug\net8.0\de\Microsoft.Data.SqlClient.resources.dll
+C:\Algoritmos3\MinimalApiDapper - Optimizado\bin\Debug\net8.0\es\Microsoft.Data.SqlClient.resources.dll
+C:\Algoritmos3\MinimalApiDapper - Optimizado\bin\Debug\net8.0\fr\Microsoft.Data.SqlClient.resources.dll
+C:\Algoritmos3\MinimalApiDapper - Optimizado\bin\Debug\net8.0\it\Microsoft.Data.SqlClient.resources.dll
+C:\Algoritmos3\MinimalApiDapper - Optimizado\bin\Debug\net8.0\ja\Microsoft.Data.SqlClient.resources.dll
+C:\Algoritmos3\MinimalApiDapper - Optimizado\bin\Debug\net8.0\ko\Microsoft.Data.SqlClient.resources.dll
+C:\Algoritmos3\MinimalApiDapper - Optimizado\bin\Debug\net8.0\pt-BR\Microsoft.Data.SqlClient.resources.dll
+C:\Algoritmos3\MinimalApiDapper - Optimizado\bin\Debug\net8.0\ru\Microsoft.Data.SqlClient.resources.dll
+C:\Algoritmos3\MinimalApiDapper - Optimizado\bin\Debug\net8.0\zh-Hans\Microsoft.Data.SqlClient.resources.dll
+C:\Algoritmos3\MinimalApiDapper - Optimizado\bin\Debug\net8.0\zh-Hant\Microsoft.Data.SqlClient.resources.dll
+C:\Algoritmos3\MinimalApiDapper - Optimizado\bin\Debug\net8.0\runtimes\unix\lib\net8.0\Microsoft.Data.SqlClient.dll
+C:\Algoritmos3\MinimalApiDapper - Optimizado\bin\Debug\net8.0\runtimes\win\lib\net8.0\Microsoft.Data.SqlClient.dll
+C:\Algoritmos3\MinimalApiDapper - Optimizado\bin\Debug\net8.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Algoritmos3\MinimalApiDapper - Optimizado\bin\Debug\net8.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Algoritmos3\MinimalApiDapper - Optimizado\bin\Debug\net8.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Algoritmos3\MinimalApiDapper - Optimizado\bin\Debug\net8.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Algoritmos3\MinimalApiDapper - Optimizado\bin\Debug\net8.0\runtimes\win\lib\net8.0\System.Runtime.Caching.dll
+C:\Algoritmos3\MinimalApiDapper - Optimizado\obj\Debug\net8.0\staticwebassets.build.json
+C:\Algoritmos3\MinimalApiDapper - Optimizado\obj\Debug\net8.0\staticwebassets.development.json
+C:\Algoritmos3\MinimalApiDapper - Optimizado\obj\Debug\net8.0\scopedcss\bundle\MinimalApiDapper.styles.css
+C:\Algoritmos3\MinimalApiDapper - Optimizado\obj\Debug\net8.0\MinimalA.7DF8AD46.Up2Date
+C:\Algoritmos3\MinimalApiDapper - Optimizado\obj\Debug\net8.0\MinimalApiDapper.dll
+C:\Algoritmos3\MinimalApiDapper - Optimizado\obj\Debug\net8.0\refint\MinimalApiDapper.dll
+C:\Algoritmos3\MinimalApiDapper - Optimizado\obj\Debug\net8.0\MinimalApiDapper.pdb
+C:\Algoritmos3\MinimalApiDapper - Optimizado\obj\Debug\net8.0\MinimalApiDapper.genruntimeconfig.cache
+C:\Algoritmos3\MinimalApiDapper - Optimizado\obj\Debug\net8.0\ref\MinimalApiDapper.dll
+C:\Algoritmos3\MinimalApiDapper - Optimizado\bin\Debug\net8.0\MinimalApiDapper.staticwebassets.endpoints.json
+C:\Algoritmos3\MinimalApiDapper - Optimizado\obj\Debug\net8.0\rpswa.dswa.cache.json
+C:\Algoritmos3\MinimalApiDapper - Optimizado\obj\Debug\net8.0\rjimswa.dswa.cache.json
+C:\Algoritmos3\MinimalApiDapper - Optimizado\obj\Debug\net8.0\rjsmrazor.dswa.cache.json
+C:\Algoritmos3\MinimalApiDapper - Optimizado\obj\Debug\net8.0\rjsmcshtml.dswa.cache.json
+C:\Algoritmos3\MinimalApiDapper - Optimizado\obj\Debug\net8.0\staticwebassets.build.json.cache
+C:\Algoritmos3\MinimalApiDapper - Optimizado\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+F:\Login admin\MinimalApiDapper\obj\Debug\net8.0\MinimalApiDapper.csproj.AssemblyReference.cache
+F:\Login admin\MinimalApiDapper\obj\Debug\net8.0\rpswa.dswa.cache.json
+F:\Login admin\MinimalApiDapper\obj\Debug\net8.0\MinimalApiDapper.GeneratedMSBuildEditorConfig.editorconfig
+F:\Login admin\MinimalApiDapper\obj\Debug\net8.0\MinimalApiDapper.AssemblyInfoInputs.cache
+F:\Login admin\MinimalApiDapper\obj\Debug\net8.0\MinimalApiDapper.AssemblyInfo.cs
+F:\Login admin\MinimalApiDapper\obj\Debug\net8.0\MinimalApiDapper.csproj.CoreCompileInputs.cache
+F:\Login admin\MinimalApiDapper\obj\Debug\net8.0\MinimalApiDapper.MvcApplicationPartsAssemblyInfo.cs
+F:\Login admin\MinimalApiDapper\obj\Debug\net8.0\MinimalApiDapper.MvcApplicationPartsAssemblyInfo.cache
+F:\Login admin\MinimalApiDapper\obj\Debug\net8.0\MinimalApiDapper.dll
+F:\Login admin\MinimalApiDapper\obj\Debug\net8.0\refint\MinimalApiDapper.dll
+F:\Login admin\MinimalApiDapper\obj\Debug\net8.0\MinimalApiDapper.pdb
+F:\Login admin\MinimalApiDapper\bin\Debug\net8.0\appsettings.Development.json
+F:\Login admin\MinimalApiDapper\bin\Debug\net8.0\appsettings.json
+F:\Login admin\MinimalApiDapper\bin\Debug\net8.0\MinimalApiDapper.staticwebassets.endpoints.json
+F:\Login admin\MinimalApiDapper\bin\Debug\net8.0\MinimalApiDapper.exe
+F:\Login admin\MinimalApiDapper\bin\Debug\net8.0\MinimalApiDapper.deps.json
+F:\Login admin\MinimalApiDapper\bin\Debug\net8.0\MinimalApiDapper.runtimeconfig.json
+F:\Login admin\MinimalApiDapper\bin\Debug\net8.0\MinimalApiDapper.dll
+F:\Login admin\MinimalApiDapper\bin\Debug\net8.0\MinimalApiDapper.pdb
+F:\Login admin\MinimalApiDapper\bin\Debug\net8.0\Azure.Core.dll
+F:\Login admin\MinimalApiDapper\bin\Debug\net8.0\Azure.Identity.dll
+F:\Login admin\MinimalApiDapper\bin\Debug\net8.0\Dapper.dll
+F:\Login admin\MinimalApiDapper\bin\Debug\net8.0\Microsoft.AspNetCore.OpenApi.dll
+F:\Login admin\MinimalApiDapper\bin\Debug\net8.0\Microsoft.Bcl.AsyncInterfaces.dll
+F:\Login admin\MinimalApiDapper\bin\Debug\net8.0\Microsoft.Data.SqlClient.dll
+F:\Login admin\MinimalApiDapper\bin\Debug\net8.0\Microsoft.Identity.Client.dll
+F:\Login admin\MinimalApiDapper\bin\Debug\net8.0\Microsoft.Identity.Client.Extensions.Msal.dll
+F:\Login admin\MinimalApiDapper\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
+F:\Login admin\MinimalApiDapper\bin\Debug\net8.0\Microsoft.IdentityModel.JsonWebTokens.dll
+F:\Login admin\MinimalApiDapper\bin\Debug\net8.0\Microsoft.IdentityModel.Logging.dll
+F:\Login admin\MinimalApiDapper\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.dll
+F:\Login admin\MinimalApiDapper\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+F:\Login admin\MinimalApiDapper\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
+F:\Login admin\MinimalApiDapper\bin\Debug\net8.0\Microsoft.OpenApi.dll
+F:\Login admin\MinimalApiDapper\bin\Debug\net8.0\Microsoft.SqlServer.Server.dll
+F:\Login admin\MinimalApiDapper\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
+F:\Login admin\MinimalApiDapper\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+F:\Login admin\MinimalApiDapper\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+F:\Login admin\MinimalApiDapper\bin\Debug\net8.0\System.ClientModel.dll
+F:\Login admin\MinimalApiDapper\bin\Debug\net8.0\System.Configuration.ConfigurationManager.dll
+F:\Login admin\MinimalApiDapper\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll
+F:\Login admin\MinimalApiDapper\bin\Debug\net8.0\System.Memory.Data.dll
+F:\Login admin\MinimalApiDapper\bin\Debug\net8.0\System.Runtime.Caching.dll
+F:\Login admin\MinimalApiDapper\bin\Debug\net8.0\System.Security.Cryptography.ProtectedData.dll
+F:\Login admin\MinimalApiDapper\bin\Debug\net8.0\de\Microsoft.Data.SqlClient.resources.dll
+F:\Login admin\MinimalApiDapper\bin\Debug\net8.0\es\Microsoft.Data.SqlClient.resources.dll
+F:\Login admin\MinimalApiDapper\bin\Debug\net8.0\fr\Microsoft.Data.SqlClient.resources.dll
+F:\Login admin\MinimalApiDapper\bin\Debug\net8.0\it\Microsoft.Data.SqlClient.resources.dll
+F:\Login admin\MinimalApiDapper\bin\Debug\net8.0\ja\Microsoft.Data.SqlClient.resources.dll
+F:\Login admin\MinimalApiDapper\bin\Debug\net8.0\ko\Microsoft.Data.SqlClient.resources.dll
+F:\Login admin\MinimalApiDapper\bin\Debug\net8.0\pt-BR\Microsoft.Data.SqlClient.resources.dll
+F:\Login admin\MinimalApiDapper\bin\Debug\net8.0\ru\Microsoft.Data.SqlClient.resources.dll
+F:\Login admin\MinimalApiDapper\bin\Debug\net8.0\zh-Hans\Microsoft.Data.SqlClient.resources.dll
+F:\Login admin\MinimalApiDapper\bin\Debug\net8.0\zh-Hant\Microsoft.Data.SqlClient.resources.dll
+F:\Login admin\MinimalApiDapper\bin\Debug\net8.0\runtimes\unix\lib\net8.0\Microsoft.Data.SqlClient.dll
+F:\Login admin\MinimalApiDapper\bin\Debug\net8.0\runtimes\win\lib\net8.0\Microsoft.Data.SqlClient.dll
+F:\Login admin\MinimalApiDapper\bin\Debug\net8.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+F:\Login admin\MinimalApiDapper\bin\Debug\net8.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+F:\Login admin\MinimalApiDapper\bin\Debug\net8.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+F:\Login admin\MinimalApiDapper\bin\Debug\net8.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+F:\Login admin\MinimalApiDapper\bin\Debug\net8.0\runtimes\win\lib\net8.0\System.Runtime.Caching.dll
+F:\Login admin\MinimalApiDapper\obj\Debug\net8.0\rjimswa.dswa.cache.json
+F:\Login admin\MinimalApiDapper\obj\Debug\net8.0\rjsmrazor.dswa.cache.json
+F:\Login admin\MinimalApiDapper\obj\Debug\net8.0\rjsmcshtml.dswa.cache.json
+F:\Login admin\MinimalApiDapper\obj\Debug\net8.0\scopedcss\bundle\MinimalApiDapper.styles.css
+F:\Login admin\MinimalApiDapper\obj\Debug\net8.0\staticwebassets.build.json
+F:\Login admin\MinimalApiDapper\obj\Debug\net8.0\staticwebassets.build.json.cache
+F:\Login admin\MinimalApiDapper\obj\Debug\net8.0\staticwebassets.development.json
+F:\Login admin\MinimalApiDapper\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+F:\Login admin\MinimalApiDapper\obj\Debug\net8.0\MinimalA.7DF8AD46.Up2Date
+F:\Login admin\MinimalApiDapper\obj\Debug\net8.0\MinimalApiDapper.genruntimeconfig.cache
+F:\Login admin\MinimalApiDapper\obj\Debug\net8.0\ref\MinimalApiDapper.dll
+D:\Login admin\MinimalApiDapper\bin\Debug\net8.0\appsettings.Development.json
+D:\Login admin\MinimalApiDapper\bin\Debug\net8.0\appsettings.json
+D:\Login admin\MinimalApiDapper\bin\Debug\net8.0\MinimalApiDapper.staticwebassets.endpoints.json
+D:\Login admin\MinimalApiDapper\bin\Debug\net8.0\MinimalApiDapper.exe
+D:\Login admin\MinimalApiDapper\bin\Debug\net8.0\MinimalApiDapper.deps.json
+D:\Login admin\MinimalApiDapper\bin\Debug\net8.0\MinimalApiDapper.runtimeconfig.json
+D:\Login admin\MinimalApiDapper\bin\Debug\net8.0\MinimalApiDapper.dll
+D:\Login admin\MinimalApiDapper\bin\Debug\net8.0\MinimalApiDapper.pdb
+D:\Login admin\MinimalApiDapper\bin\Debug\net8.0\Azure.Core.dll
+D:\Login admin\MinimalApiDapper\bin\Debug\net8.0\Azure.Identity.dll
+D:\Login admin\MinimalApiDapper\bin\Debug\net8.0\Dapper.dll
+D:\Login admin\MinimalApiDapper\bin\Debug\net8.0\Microsoft.AspNetCore.OpenApi.dll
+D:\Login admin\MinimalApiDapper\bin\Debug\net8.0\Microsoft.Bcl.AsyncInterfaces.dll
+D:\Login admin\MinimalApiDapper\bin\Debug\net8.0\Microsoft.Data.SqlClient.dll
+D:\Login admin\MinimalApiDapper\bin\Debug\net8.0\Microsoft.Identity.Client.dll
+D:\Login admin\MinimalApiDapper\bin\Debug\net8.0\Microsoft.Identity.Client.Extensions.Msal.dll
+D:\Login admin\MinimalApiDapper\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
+D:\Login admin\MinimalApiDapper\bin\Debug\net8.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\Login admin\MinimalApiDapper\bin\Debug\net8.0\Microsoft.IdentityModel.Logging.dll
+D:\Login admin\MinimalApiDapper\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.dll
+D:\Login admin\MinimalApiDapper\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\Login admin\MinimalApiDapper\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
+D:\Login admin\MinimalApiDapper\bin\Debug\net8.0\Microsoft.OpenApi.dll
+D:\Login admin\MinimalApiDapper\bin\Debug\net8.0\Microsoft.SqlServer.Server.dll
+D:\Login admin\MinimalApiDapper\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
+D:\Login admin\MinimalApiDapper\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\Login admin\MinimalApiDapper\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+D:\Login admin\MinimalApiDapper\bin\Debug\net8.0\System.ClientModel.dll
+D:\Login admin\MinimalApiDapper\bin\Debug\net8.0\System.Configuration.ConfigurationManager.dll
+D:\Login admin\MinimalApiDapper\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll
+D:\Login admin\MinimalApiDapper\bin\Debug\net8.0\System.Memory.Data.dll
+D:\Login admin\MinimalApiDapper\bin\Debug\net8.0\System.Runtime.Caching.dll
+D:\Login admin\MinimalApiDapper\bin\Debug\net8.0\System.Security.Cryptography.ProtectedData.dll
+D:\Login admin\MinimalApiDapper\bin\Debug\net8.0\de\Microsoft.Data.SqlClient.resources.dll
+D:\Login admin\MinimalApiDapper\bin\Debug\net8.0\es\Microsoft.Data.SqlClient.resources.dll
+D:\Login admin\MinimalApiDapper\bin\Debug\net8.0\fr\Microsoft.Data.SqlClient.resources.dll
+D:\Login admin\MinimalApiDapper\bin\Debug\net8.0\it\Microsoft.Data.SqlClient.resources.dll
+D:\Login admin\MinimalApiDapper\bin\Debug\net8.0\ja\Microsoft.Data.SqlClient.resources.dll
+D:\Login admin\MinimalApiDapper\bin\Debug\net8.0\ko\Microsoft.Data.SqlClient.resources.dll
+D:\Login admin\MinimalApiDapper\bin\Debug\net8.0\pt-BR\Microsoft.Data.SqlClient.resources.dll
+D:\Login admin\MinimalApiDapper\bin\Debug\net8.0\ru\Microsoft.Data.SqlClient.resources.dll
+D:\Login admin\MinimalApiDapper\bin\Debug\net8.0\zh-Hans\Microsoft.Data.SqlClient.resources.dll
+D:\Login admin\MinimalApiDapper\bin\Debug\net8.0\zh-Hant\Microsoft.Data.SqlClient.resources.dll
+D:\Login admin\MinimalApiDapper\bin\Debug\net8.0\runtimes\unix\lib\net8.0\Microsoft.Data.SqlClient.dll
+D:\Login admin\MinimalApiDapper\bin\Debug\net8.0\runtimes\win\lib\net8.0\Microsoft.Data.SqlClient.dll
+D:\Login admin\MinimalApiDapper\bin\Debug\net8.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Login admin\MinimalApiDapper\bin\Debug\net8.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Login admin\MinimalApiDapper\bin\Debug\net8.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Login admin\MinimalApiDapper\bin\Debug\net8.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Login admin\MinimalApiDapper\bin\Debug\net8.0\runtimes\win\lib\net8.0\System.Runtime.Caching.dll
+D:\Login admin\MinimalApiDapper\obj\Debug\net8.0\MinimalApiDapper.csproj.AssemblyReference.cache
+D:\Login admin\MinimalApiDapper\obj\Debug\net8.0\rpswa.dswa.cache.json
+D:\Login admin\MinimalApiDapper\obj\Debug\net8.0\MinimalApiDapper.GeneratedMSBuildEditorConfig.editorconfig
+D:\Login admin\MinimalApiDapper\obj\Debug\net8.0\MinimalApiDapper.AssemblyInfoInputs.cache
+D:\Login admin\MinimalApiDapper\obj\Debug\net8.0\MinimalApiDapper.AssemblyInfo.cs
+D:\Login admin\MinimalApiDapper\obj\Debug\net8.0\MinimalApiDapper.csproj.CoreCompileInputs.cache
+D:\Login admin\MinimalApiDapper\obj\Debug\net8.0\MinimalApiDapper.MvcApplicationPartsAssemblyInfo.cs
+D:\Login admin\MinimalApiDapper\obj\Debug\net8.0\MinimalApiDapper.MvcApplicationPartsAssemblyInfo.cache
+D:\Login admin\MinimalApiDapper\obj\Debug\net8.0\rjimswa.dswa.cache.json
+D:\Login admin\MinimalApiDapper\obj\Debug\net8.0\rjsmrazor.dswa.cache.json
+D:\Login admin\MinimalApiDapper\obj\Debug\net8.0\rjsmcshtml.dswa.cache.json
+D:\Login admin\MinimalApiDapper\obj\Debug\net8.0\scopedcss\bundle\MinimalApiDapper.styles.css
+D:\Login admin\MinimalApiDapper\obj\Debug\net8.0\staticwebassets.build.json
+D:\Login admin\MinimalApiDapper\obj\Debug\net8.0\staticwebassets.build.json.cache
+D:\Login admin\MinimalApiDapper\obj\Debug\net8.0\staticwebassets.development.json
+D:\Login admin\MinimalApiDapper\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+D:\Login admin\MinimalApiDapper\obj\Debug\net8.0\MinimalA.7DF8AD46.Up2Date
+D:\Login admin\MinimalApiDapper\obj\Debug\net8.0\MinimalApiDapper.dll
+D:\Login admin\MinimalApiDapper\obj\Debug\net8.0\refint\MinimalApiDapper.dll
+D:\Login admin\MinimalApiDapper\obj\Debug\net8.0\MinimalApiDapper.pdb
+D:\Login admin\MinimalApiDapper\obj\Debug\net8.0\MinimalApiDapper.genruntimeconfig.cache
+D:\Login admin\MinimalApiDapper\obj\Debug\net8.0\ref\MinimalApiDapper.dll
+F:\Login admin\MinimalApiDapper\bin\Debug\net8.0\ClosedXML.dll
+F:\Login admin\MinimalApiDapper\bin\Debug\net8.0\ClosedXML.Parser.dll
+F:\Login admin\MinimalApiDapper\bin\Debug\net8.0\DocumentFormat.OpenXml.dll
+F:\Login admin\MinimalApiDapper\bin\Debug\net8.0\DocumentFormat.OpenXml.Framework.dll
+F:\Login admin\MinimalApiDapper\bin\Debug\net8.0\ExcelNumberFormat.dll
+F:\Login admin\MinimalApiDapper\bin\Debug\net8.0\RBush.dll
+F:\Login admin\MinimalApiDapper\bin\Debug\net8.0\SixLabors.Fonts.dll
+F:\Login admin\MinimalApiDapper\bin\Debug\net8.0\System.IO.Packaging.dll
+F:\ABRIR ESTA CARPETA FINAL ALGORITMOS 3\Rodrigo_David_Raffo_Fabio_Final_Algoritmos_3\Login admin\MinimalApiDapper\bin\Debug\net8.0\appsettings.Development.json
+F:\ABRIR ESTA CARPETA FINAL ALGORITMOS 3\Rodrigo_David_Raffo_Fabio_Final_Algoritmos_3\Login admin\MinimalApiDapper\bin\Debug\net8.0\appsettings.json
+F:\ABRIR ESTA CARPETA FINAL ALGORITMOS 3\Rodrigo_David_Raffo_Fabio_Final_Algoritmos_3\Login admin\MinimalApiDapper\bin\Debug\net8.0\MinimalApiDapper.staticwebassets.endpoints.json
+F:\ABRIR ESTA CARPETA FINAL ALGORITMOS 3\Rodrigo_David_Raffo_Fabio_Final_Algoritmos_3\Login admin\MinimalApiDapper\bin\Debug\net8.0\MinimalApiDapper.exe
+F:\ABRIR ESTA CARPETA FINAL ALGORITMOS 3\Rodrigo_David_Raffo_Fabio_Final_Algoritmos_3\Login admin\MinimalApiDapper\bin\Debug\net8.0\MinimalApiDapper.deps.json
+F:\ABRIR ESTA CARPETA FINAL ALGORITMOS 3\Rodrigo_David_Raffo_Fabio_Final_Algoritmos_3\Login admin\MinimalApiDapper\bin\Debug\net8.0\MinimalApiDapper.runtimeconfig.json
+F:\ABRIR ESTA CARPETA FINAL ALGORITMOS 3\Rodrigo_David_Raffo_Fabio_Final_Algoritmos_3\Login admin\MinimalApiDapper\bin\Debug\net8.0\MinimalApiDapper.dll
+F:\ABRIR ESTA CARPETA FINAL ALGORITMOS 3\Rodrigo_David_Raffo_Fabio_Final_Algoritmos_3\Login admin\MinimalApiDapper\bin\Debug\net8.0\MinimalApiDapper.pdb
+F:\ABRIR ESTA CARPETA FINAL ALGORITMOS 3\Rodrigo_David_Raffo_Fabio_Final_Algoritmos_3\Login admin\MinimalApiDapper\bin\Debug\net8.0\Azure.Core.dll
+F:\ABRIR ESTA CARPETA FINAL ALGORITMOS 3\Rodrigo_David_Raffo_Fabio_Final_Algoritmos_3\Login admin\MinimalApiDapper\bin\Debug\net8.0\Azure.Identity.dll
+F:\ABRIR ESTA CARPETA FINAL ALGORITMOS 3\Rodrigo_David_Raffo_Fabio_Final_Algoritmos_3\Login admin\MinimalApiDapper\bin\Debug\net8.0\ClosedXML.dll
+F:\ABRIR ESTA CARPETA FINAL ALGORITMOS 3\Rodrigo_David_Raffo_Fabio_Final_Algoritmos_3\Login admin\MinimalApiDapper\bin\Debug\net8.0\ClosedXML.Parser.dll
+F:\ABRIR ESTA CARPETA FINAL ALGORITMOS 3\Rodrigo_David_Raffo_Fabio_Final_Algoritmos_3\Login admin\MinimalApiDapper\bin\Debug\net8.0\Dapper.dll
+F:\ABRIR ESTA CARPETA FINAL ALGORITMOS 3\Rodrigo_David_Raffo_Fabio_Final_Algoritmos_3\Login admin\MinimalApiDapper\bin\Debug\net8.0\DocumentFormat.OpenXml.dll
+F:\ABRIR ESTA CARPETA FINAL ALGORITMOS 3\Rodrigo_David_Raffo_Fabio_Final_Algoritmos_3\Login admin\MinimalApiDapper\bin\Debug\net8.0\DocumentFormat.OpenXml.Framework.dll
+F:\ABRIR ESTA CARPETA FINAL ALGORITMOS 3\Rodrigo_David_Raffo_Fabio_Final_Algoritmos_3\Login admin\MinimalApiDapper\bin\Debug\net8.0\ExcelNumberFormat.dll
+F:\ABRIR ESTA CARPETA FINAL ALGORITMOS 3\Rodrigo_David_Raffo_Fabio_Final_Algoritmos_3\Login admin\MinimalApiDapper\bin\Debug\net8.0\Microsoft.AspNetCore.OpenApi.dll
+F:\ABRIR ESTA CARPETA FINAL ALGORITMOS 3\Rodrigo_David_Raffo_Fabio_Final_Algoritmos_3\Login admin\MinimalApiDapper\bin\Debug\net8.0\Microsoft.Bcl.AsyncInterfaces.dll
+F:\ABRIR ESTA CARPETA FINAL ALGORITMOS 3\Rodrigo_David_Raffo_Fabio_Final_Algoritmos_3\Login admin\MinimalApiDapper\bin\Debug\net8.0\Microsoft.Data.SqlClient.dll
+F:\ABRIR ESTA CARPETA FINAL ALGORITMOS 3\Rodrigo_David_Raffo_Fabio_Final_Algoritmos_3\Login admin\MinimalApiDapper\bin\Debug\net8.0\Microsoft.Identity.Client.dll
+F:\ABRIR ESTA CARPETA FINAL ALGORITMOS 3\Rodrigo_David_Raffo_Fabio_Final_Algoritmos_3\Login admin\MinimalApiDapper\bin\Debug\net8.0\Microsoft.Identity.Client.Extensions.Msal.dll
+F:\ABRIR ESTA CARPETA FINAL ALGORITMOS 3\Rodrigo_David_Raffo_Fabio_Final_Algoritmos_3\Login admin\MinimalApiDapper\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
+F:\ABRIR ESTA CARPETA FINAL ALGORITMOS 3\Rodrigo_David_Raffo_Fabio_Final_Algoritmos_3\Login admin\MinimalApiDapper\bin\Debug\net8.0\Microsoft.IdentityModel.JsonWebTokens.dll
+F:\ABRIR ESTA CARPETA FINAL ALGORITMOS 3\Rodrigo_David_Raffo_Fabio_Final_Algoritmos_3\Login admin\MinimalApiDapper\bin\Debug\net8.0\Microsoft.IdentityModel.Logging.dll
+F:\ABRIR ESTA CARPETA FINAL ALGORITMOS 3\Rodrigo_David_Raffo_Fabio_Final_Algoritmos_3\Login admin\MinimalApiDapper\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.dll
+F:\ABRIR ESTA CARPETA FINAL ALGORITMOS 3\Rodrigo_David_Raffo_Fabio_Final_Algoritmos_3\Login admin\MinimalApiDapper\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+F:\ABRIR ESTA CARPETA FINAL ALGORITMOS 3\Rodrigo_David_Raffo_Fabio_Final_Algoritmos_3\Login admin\MinimalApiDapper\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
+F:\ABRIR ESTA CARPETA FINAL ALGORITMOS 3\Rodrigo_David_Raffo_Fabio_Final_Algoritmos_3\Login admin\MinimalApiDapper\bin\Debug\net8.0\Microsoft.OpenApi.dll
+F:\ABRIR ESTA CARPETA FINAL ALGORITMOS 3\Rodrigo_David_Raffo_Fabio_Final_Algoritmos_3\Login admin\MinimalApiDapper\bin\Debug\net8.0\Microsoft.SqlServer.Server.dll
+F:\ABRIR ESTA CARPETA FINAL ALGORITMOS 3\Rodrigo_David_Raffo_Fabio_Final_Algoritmos_3\Login admin\MinimalApiDapper\bin\Debug\net8.0\RBush.dll
+F:\ABRIR ESTA CARPETA FINAL ALGORITMOS 3\Rodrigo_David_Raffo_Fabio_Final_Algoritmos_3\Login admin\MinimalApiDapper\bin\Debug\net8.0\SixLabors.Fonts.dll
+F:\ABRIR ESTA CARPETA FINAL ALGORITMOS 3\Rodrigo_David_Raffo_Fabio_Final_Algoritmos_3\Login admin\MinimalApiDapper\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
+F:\ABRIR ESTA CARPETA FINAL ALGORITMOS 3\Rodrigo_David_Raffo_Fabio_Final_Algoritmos_3\Login admin\MinimalApiDapper\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+F:\ABRIR ESTA CARPETA FINAL ALGORITMOS 3\Rodrigo_David_Raffo_Fabio_Final_Algoritmos_3\Login admin\MinimalApiDapper\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+F:\ABRIR ESTA CARPETA FINAL ALGORITMOS 3\Rodrigo_David_Raffo_Fabio_Final_Algoritmos_3\Login admin\MinimalApiDapper\bin\Debug\net8.0\System.ClientModel.dll
+F:\ABRIR ESTA CARPETA FINAL ALGORITMOS 3\Rodrigo_David_Raffo_Fabio_Final_Algoritmos_3\Login admin\MinimalApiDapper\bin\Debug\net8.0\System.Configuration.ConfigurationManager.dll
+F:\ABRIR ESTA CARPETA FINAL ALGORITMOS 3\Rodrigo_David_Raffo_Fabio_Final_Algoritmos_3\Login admin\MinimalApiDapper\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll
+F:\ABRIR ESTA CARPETA FINAL ALGORITMOS 3\Rodrigo_David_Raffo_Fabio_Final_Algoritmos_3\Login admin\MinimalApiDapper\bin\Debug\net8.0\System.IO.Packaging.dll
+F:\ABRIR ESTA CARPETA FINAL ALGORITMOS 3\Rodrigo_David_Raffo_Fabio_Final_Algoritmos_3\Login admin\MinimalApiDapper\bin\Debug\net8.0\System.Memory.Data.dll
+F:\ABRIR ESTA CARPETA FINAL ALGORITMOS 3\Rodrigo_David_Raffo_Fabio_Final_Algoritmos_3\Login admin\MinimalApiDapper\bin\Debug\net8.0\System.Runtime.Caching.dll
+F:\ABRIR ESTA CARPETA FINAL ALGORITMOS 3\Rodrigo_David_Raffo_Fabio_Final_Algoritmos_3\Login admin\MinimalApiDapper\bin\Debug\net8.0\System.Security.Cryptography.ProtectedData.dll
+F:\ABRIR ESTA CARPETA FINAL ALGORITMOS 3\Rodrigo_David_Raffo_Fabio_Final_Algoritmos_3\Login admin\MinimalApiDapper\bin\Debug\net8.0\de\Microsoft.Data.SqlClient.resources.dll
+F:\ABRIR ESTA CARPETA FINAL ALGORITMOS 3\Rodrigo_David_Raffo_Fabio_Final_Algoritmos_3\Login admin\MinimalApiDapper\bin\Debug\net8.0\es\Microsoft.Data.SqlClient.resources.dll
+F:\ABRIR ESTA CARPETA FINAL ALGORITMOS 3\Rodrigo_David_Raffo_Fabio_Final_Algoritmos_3\Login admin\MinimalApiDapper\bin\Debug\net8.0\fr\Microsoft.Data.SqlClient.resources.dll
+F:\ABRIR ESTA CARPETA FINAL ALGORITMOS 3\Rodrigo_David_Raffo_Fabio_Final_Algoritmos_3\Login admin\MinimalApiDapper\bin\Debug\net8.0\it\Microsoft.Data.SqlClient.resources.dll
+F:\ABRIR ESTA CARPETA FINAL ALGORITMOS 3\Rodrigo_David_Raffo_Fabio_Final_Algoritmos_3\Login admin\MinimalApiDapper\bin\Debug\net8.0\ja\Microsoft.Data.SqlClient.resources.dll
+F:\ABRIR ESTA CARPETA FINAL ALGORITMOS 3\Rodrigo_David_Raffo_Fabio_Final_Algoritmos_3\Login admin\MinimalApiDapper\bin\Debug\net8.0\ko\Microsoft.Data.SqlClient.resources.dll
+F:\ABRIR ESTA CARPETA FINAL ALGORITMOS 3\Rodrigo_David_Raffo_Fabio_Final_Algoritmos_3\Login admin\MinimalApiDapper\bin\Debug\net8.0\pt-BR\Microsoft.Data.SqlClient.resources.dll
+F:\ABRIR ESTA CARPETA FINAL ALGORITMOS 3\Rodrigo_David_Raffo_Fabio_Final_Algoritmos_3\Login admin\MinimalApiDapper\bin\Debug\net8.0\ru\Microsoft.Data.SqlClient.resources.dll
+F:\ABRIR ESTA CARPETA FINAL ALGORITMOS 3\Rodrigo_David_Raffo_Fabio_Final_Algoritmos_3\Login admin\MinimalApiDapper\bin\Debug\net8.0\zh-Hans\Microsoft.Data.SqlClient.resources.dll
+F:\ABRIR ESTA CARPETA FINAL ALGORITMOS 3\Rodrigo_David_Raffo_Fabio_Final_Algoritmos_3\Login admin\MinimalApiDapper\bin\Debug\net8.0\zh-Hant\Microsoft.Data.SqlClient.resources.dll
+F:\ABRIR ESTA CARPETA FINAL ALGORITMOS 3\Rodrigo_David_Raffo_Fabio_Final_Algoritmos_3\Login admin\MinimalApiDapper\bin\Debug\net8.0\runtimes\unix\lib\net8.0\Microsoft.Data.SqlClient.dll
+F:\ABRIR ESTA CARPETA FINAL ALGORITMOS 3\Rodrigo_David_Raffo_Fabio_Final_Algoritmos_3\Login admin\MinimalApiDapper\bin\Debug\net8.0\runtimes\win\lib\net8.0\Microsoft.Data.SqlClient.dll
+F:\ABRIR ESTA CARPETA FINAL ALGORITMOS 3\Rodrigo_David_Raffo_Fabio_Final_Algoritmos_3\Login admin\MinimalApiDapper\bin\Debug\net8.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+F:\ABRIR ESTA CARPETA FINAL ALGORITMOS 3\Rodrigo_David_Raffo_Fabio_Final_Algoritmos_3\Login admin\MinimalApiDapper\bin\Debug\net8.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+F:\ABRIR ESTA CARPETA FINAL ALGORITMOS 3\Rodrigo_David_Raffo_Fabio_Final_Algoritmos_3\Login admin\MinimalApiDapper\bin\Debug\net8.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+F:\ABRIR ESTA CARPETA FINAL ALGORITMOS 3\Rodrigo_David_Raffo_Fabio_Final_Algoritmos_3\Login admin\MinimalApiDapper\bin\Debug\net8.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+F:\ABRIR ESTA CARPETA FINAL ALGORITMOS 3\Rodrigo_David_Raffo_Fabio_Final_Algoritmos_3\Login admin\MinimalApiDapper\bin\Debug\net8.0\runtimes\win\lib\net8.0\System.Runtime.Caching.dll
+F:\ABRIR ESTA CARPETA FINAL ALGORITMOS 3\Rodrigo_David_Raffo_Fabio_Final_Algoritmos_3\Login admin\MinimalApiDapper\obj\Debug\net8.0\MinimalApiDapper.csproj.AssemblyReference.cache
+F:\ABRIR ESTA CARPETA FINAL ALGORITMOS 3\Rodrigo_David_Raffo_Fabio_Final_Algoritmos_3\Login admin\MinimalApiDapper\obj\Debug\net8.0\rpswa.dswa.cache.json
+F:\ABRIR ESTA CARPETA FINAL ALGORITMOS 3\Rodrigo_David_Raffo_Fabio_Final_Algoritmos_3\Login admin\MinimalApiDapper\obj\Debug\net8.0\MinimalApiDapper.GeneratedMSBuildEditorConfig.editorconfig
+F:\ABRIR ESTA CARPETA FINAL ALGORITMOS 3\Rodrigo_David_Raffo_Fabio_Final_Algoritmos_3\Login admin\MinimalApiDapper\obj\Debug\net8.0\MinimalApiDapper.AssemblyInfoInputs.cache
+F:\ABRIR ESTA CARPETA FINAL ALGORITMOS 3\Rodrigo_David_Raffo_Fabio_Final_Algoritmos_3\Login admin\MinimalApiDapper\obj\Debug\net8.0\MinimalApiDapper.AssemblyInfo.cs
+F:\ABRIR ESTA CARPETA FINAL ALGORITMOS 3\Rodrigo_David_Raffo_Fabio_Final_Algoritmos_3\Login admin\MinimalApiDapper\obj\Debug\net8.0\MinimalApiDapper.csproj.CoreCompileInputs.cache
+F:\ABRIR ESTA CARPETA FINAL ALGORITMOS 3\Rodrigo_David_Raffo_Fabio_Final_Algoritmos_3\Login admin\MinimalApiDapper\obj\Debug\net8.0\MinimalApiDapper.MvcApplicationPartsAssemblyInfo.cs
+F:\ABRIR ESTA CARPETA FINAL ALGORITMOS 3\Rodrigo_David_Raffo_Fabio_Final_Algoritmos_3\Login admin\MinimalApiDapper\obj\Debug\net8.0\MinimalApiDapper.MvcApplicationPartsAssemblyInfo.cache
+F:\ABRIR ESTA CARPETA FINAL ALGORITMOS 3\Rodrigo_David_Raffo_Fabio_Final_Algoritmos_3\Login admin\MinimalApiDapper\obj\Debug\net8.0\rjimswa.dswa.cache.json
+F:\ABRIR ESTA CARPETA FINAL ALGORITMOS 3\Rodrigo_David_Raffo_Fabio_Final_Algoritmos_3\Login admin\MinimalApiDapper\obj\Debug\net8.0\rjsmrazor.dswa.cache.json
+F:\ABRIR ESTA CARPETA FINAL ALGORITMOS 3\Rodrigo_David_Raffo_Fabio_Final_Algoritmos_3\Login admin\MinimalApiDapper\obj\Debug\net8.0\rjsmcshtml.dswa.cache.json
+F:\ABRIR ESTA CARPETA FINAL ALGORITMOS 3\Rodrigo_David_Raffo_Fabio_Final_Algoritmos_3\Login admin\MinimalApiDapper\obj\Debug\net8.0\scopedcss\bundle\MinimalApiDapper.styles.css
+F:\ABRIR ESTA CARPETA FINAL ALGORITMOS 3\Rodrigo_David_Raffo_Fabio_Final_Algoritmos_3\Login admin\MinimalApiDapper\obj\Debug\net8.0\staticwebassets.build.json
+F:\ABRIR ESTA CARPETA FINAL ALGORITMOS 3\Rodrigo_David_Raffo_Fabio_Final_Algoritmos_3\Login admin\MinimalApiDapper\obj\Debug\net8.0\staticwebassets.build.json.cache
+F:\ABRIR ESTA CARPETA FINAL ALGORITMOS 3\Rodrigo_David_Raffo_Fabio_Final_Algoritmos_3\Login admin\MinimalApiDapper\obj\Debug\net8.0\staticwebassets.development.json
+F:\ABRIR ESTA CARPETA FINAL ALGORITMOS 3\Rodrigo_David_Raffo_Fabio_Final_Algoritmos_3\Login admin\MinimalApiDapper\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+F:\ABRIR ESTA CARPETA FINAL ALGORITMOS 3\Rodrigo_David_Raffo_Fabio_Final_Algoritmos_3\Login admin\MinimalApiDapper\obj\Debug\net8.0\MinimalA.7DF8AD46.Up2Date
+F:\ABRIR ESTA CARPETA FINAL ALGORITMOS 3\Rodrigo_David_Raffo_Fabio_Final_Algoritmos_3\Login admin\MinimalApiDapper\obj\Debug\net8.0\MinimalApiDapper.dll
+F:\ABRIR ESTA CARPETA FINAL ALGORITMOS 3\Rodrigo_David_Raffo_Fabio_Final_Algoritmos_3\Login admin\MinimalApiDapper\obj\Debug\net8.0\refint\MinimalApiDapper.dll
+F:\ABRIR ESTA CARPETA FINAL ALGORITMOS 3\Rodrigo_David_Raffo_Fabio_Final_Algoritmos_3\Login admin\MinimalApiDapper\obj\Debug\net8.0\MinimalApiDapper.pdb
+F:\ABRIR ESTA CARPETA FINAL ALGORITMOS 3\Rodrigo_David_Raffo_Fabio_Final_Algoritmos_3\Login admin\MinimalApiDapper\obj\Debug\net8.0\MinimalApiDapper.genruntimeconfig.cache
+F:\ABRIR ESTA CARPETA FINAL ALGORITMOS 3\Rodrigo_David_Raffo_Fabio_Final_Algoritmos_3\Login admin\MinimalApiDapper\obj\Debug\net8.0\ref\MinimalApiDapper.dll
+F:\ABRIR ESTA CARPETA FINAL ALGORITMOS 3\Rodrigo_David_Raffo_Fabio_Final_Algoritmos_3\Login admin y exportar excel\MinimalApiDapper\bin\Debug\net8.0\appsettings.Development.json
+F:\ABRIR ESTA CARPETA FINAL ALGORITMOS 3\Rodrigo_David_Raffo_Fabio_Final_Algoritmos_3\Login admin y exportar excel\MinimalApiDapper\bin\Debug\net8.0\appsettings.json
+F:\ABRIR ESTA CARPETA FINAL ALGORITMOS 3\Rodrigo_David_Raffo_Fabio_Final_Algoritmos_3\Login admin y exportar excel\MinimalApiDapper\bin\Debug\net8.0\MinimalApiDapper.staticwebassets.endpoints.json
+F:\ABRIR ESTA CARPETA FINAL ALGORITMOS 3\Rodrigo_David_Raffo_Fabio_Final_Algoritmos_3\Login admin y exportar excel\MinimalApiDapper\bin\Debug\net8.0\MinimalApiDapper.exe
+F:\ABRIR ESTA CARPETA FINAL ALGORITMOS 3\Rodrigo_David_Raffo_Fabio_Final_Algoritmos_3\Login admin y exportar excel\MinimalApiDapper\bin\Debug\net8.0\MinimalApiDapper.deps.json
+F:\ABRIR ESTA CARPETA FINAL ALGORITMOS 3\Rodrigo_David_Raffo_Fabio_Final_Algoritmos_3\Login admin y exportar excel\MinimalApiDapper\bin\Debug\net8.0\MinimalApiDapper.runtimeconfig.json
+F:\ABRIR ESTA CARPETA FINAL ALGORITMOS 3\Rodrigo_David_Raffo_Fabio_Final_Algoritmos_3\Login admin y exportar excel\MinimalApiDapper\bin\Debug\net8.0\MinimalApiDapper.dll
+F:\ABRIR ESTA CARPETA FINAL ALGORITMOS 3\Rodrigo_David_Raffo_Fabio_Final_Algoritmos_3\Login admin y exportar excel\MinimalApiDapper\bin\Debug\net8.0\MinimalApiDapper.pdb
+F:\ABRIR ESTA CARPETA FINAL ALGORITMOS 3\Rodrigo_David_Raffo_Fabio_Final_Algoritmos_3\Login admin y exportar excel\MinimalApiDapper\bin\Debug\net8.0\Azure.Core.dll
+F:\ABRIR ESTA CARPETA FINAL ALGORITMOS 3\Rodrigo_David_Raffo_Fabio_Final_Algoritmos_3\Login admin y exportar excel\MinimalApiDapper\bin\Debug\net8.0\Azure.Identity.dll
+F:\ABRIR ESTA CARPETA FINAL ALGORITMOS 3\Rodrigo_David_Raffo_Fabio_Final_Algoritmos_3\Login admin y exportar excel\MinimalApiDapper\bin\Debug\net8.0\ClosedXML.dll
+F:\ABRIR ESTA CARPETA FINAL ALGORITMOS 3\Rodrigo_David_Raffo_Fabio_Final_Algoritmos_3\Login admin y exportar excel\MinimalApiDapper\bin\Debug\net8.0\ClosedXML.Parser.dll
+F:\ABRIR ESTA CARPETA FINAL ALGORITMOS 3\Rodrigo_David_Raffo_Fabio_Final_Algoritmos_3\Login admin y exportar excel\MinimalApiDapper\bin\Debug\net8.0\Dapper.dll
+F:\ABRIR ESTA CARPETA FINAL ALGORITMOS 3\Rodrigo_David_Raffo_Fabio_Final_Algoritmos_3\Login admin y exportar excel\MinimalApiDapper\bin\Debug\net8.0\DocumentFormat.OpenXml.dll
+F:\ABRIR ESTA CARPETA FINAL ALGORITMOS 3\Rodrigo_David_Raffo_Fabio_Final_Algoritmos_3\Login admin y exportar excel\MinimalApiDapper\bin\Debug\net8.0\DocumentFormat.OpenXml.Framework.dll
+F:\ABRIR ESTA CARPETA FINAL ALGORITMOS 3\Rodrigo_David_Raffo_Fabio_Final_Algoritmos_3\Login admin y exportar excel\MinimalApiDapper\bin\Debug\net8.0\ExcelNumberFormat.dll
+F:\ABRIR ESTA CARPETA FINAL ALGORITMOS 3\Rodrigo_David_Raffo_Fabio_Final_Algoritmos_3\Login admin y exportar excel\MinimalApiDapper\bin\Debug\net8.0\Microsoft.AspNetCore.OpenApi.dll
+F:\ABRIR ESTA CARPETA FINAL ALGORITMOS 3\Rodrigo_David_Raffo_Fabio_Final_Algoritmos_3\Login admin y exportar excel\MinimalApiDapper\bin\Debug\net8.0\Microsoft.Bcl.AsyncInterfaces.dll
+F:\ABRIR ESTA CARPETA FINAL ALGORITMOS 3\Rodrigo_David_Raffo_Fabio_Final_Algoritmos_3\Login admin y exportar excel\MinimalApiDapper\bin\Debug\net8.0\Microsoft.Data.SqlClient.dll
+F:\ABRIR ESTA CARPETA FINAL ALGORITMOS 3\Rodrigo_David_Raffo_Fabio_Final_Algoritmos_3\Login admin y exportar excel\MinimalApiDapper\bin\Debug\net8.0\Microsoft.Identity.Client.dll
+F:\ABRIR ESTA CARPETA FINAL ALGORITMOS 3\Rodrigo_David_Raffo_Fabio_Final_Algoritmos_3\Login admin y exportar excel\MinimalApiDapper\bin\Debug\net8.0\Microsoft.Identity.Client.Extensions.Msal.dll
+F:\ABRIR ESTA CARPETA FINAL ALGORITMOS 3\Rodrigo_David_Raffo_Fabio_Final_Algoritmos_3\Login admin y exportar excel\MinimalApiDapper\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
+F:\ABRIR ESTA CARPETA FINAL ALGORITMOS 3\Rodrigo_David_Raffo_Fabio_Final_Algoritmos_3\Login admin y exportar excel\MinimalApiDapper\bin\Debug\net8.0\Microsoft.IdentityModel.JsonWebTokens.dll
+F:\ABRIR ESTA CARPETA FINAL ALGORITMOS 3\Rodrigo_David_Raffo_Fabio_Final_Algoritmos_3\Login admin y exportar excel\MinimalApiDapper\bin\Debug\net8.0\Microsoft.IdentityModel.Logging.dll
+F:\ABRIR ESTA CARPETA FINAL ALGORITMOS 3\Rodrigo_David_Raffo_Fabio_Final_Algoritmos_3\Login admin y exportar excel\MinimalApiDapper\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.dll
+F:\ABRIR ESTA CARPETA FINAL ALGORITMOS 3\Rodrigo_David_Raffo_Fabio_Final_Algoritmos_3\Login admin y exportar excel\MinimalApiDapper\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+F:\ABRIR ESTA CARPETA FINAL ALGORITMOS 3\Rodrigo_David_Raffo_Fabio_Final_Algoritmos_3\Login admin y exportar excel\MinimalApiDapper\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
+F:\ABRIR ESTA CARPETA FINAL ALGORITMOS 3\Rodrigo_David_Raffo_Fabio_Final_Algoritmos_3\Login admin y exportar excel\MinimalApiDapper\bin\Debug\net8.0\Microsoft.OpenApi.dll
+F:\ABRIR ESTA CARPETA FINAL ALGORITMOS 3\Rodrigo_David_Raffo_Fabio_Final_Algoritmos_3\Login admin y exportar excel\MinimalApiDapper\bin\Debug\net8.0\Microsoft.SqlServer.Server.dll
+F:\ABRIR ESTA CARPETA FINAL ALGORITMOS 3\Rodrigo_David_Raffo_Fabio_Final_Algoritmos_3\Login admin y exportar excel\MinimalApiDapper\bin\Debug\net8.0\RBush.dll
+F:\ABRIR ESTA CARPETA FINAL ALGORITMOS 3\Rodrigo_David_Raffo_Fabio_Final_Algoritmos_3\Login admin y exportar excel\MinimalApiDapper\bin\Debug\net8.0\SixLabors.Fonts.dll
+F:\ABRIR ESTA CARPETA FINAL ALGORITMOS 3\Rodrigo_David_Raffo_Fabio_Final_Algoritmos_3\Login admin y exportar excel\MinimalApiDapper\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
+F:\ABRIR ESTA CARPETA FINAL ALGORITMOS 3\Rodrigo_David_Raffo_Fabio_Final_Algoritmos_3\Login admin y exportar excel\MinimalApiDapper\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+F:\ABRIR ESTA CARPETA FINAL ALGORITMOS 3\Rodrigo_David_Raffo_Fabio_Final_Algoritmos_3\Login admin y exportar excel\MinimalApiDapper\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+F:\ABRIR ESTA CARPETA FINAL ALGORITMOS 3\Rodrigo_David_Raffo_Fabio_Final_Algoritmos_3\Login admin y exportar excel\MinimalApiDapper\bin\Debug\net8.0\System.ClientModel.dll
+F:\ABRIR ESTA CARPETA FINAL ALGORITMOS 3\Rodrigo_David_Raffo_Fabio_Final_Algoritmos_3\Login admin y exportar excel\MinimalApiDapper\bin\Debug\net8.0\System.Configuration.ConfigurationManager.dll
+F:\ABRIR ESTA CARPETA FINAL ALGORITMOS 3\Rodrigo_David_Raffo_Fabio_Final_Algoritmos_3\Login admin y exportar excel\MinimalApiDapper\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll
+F:\ABRIR ESTA CARPETA FINAL ALGORITMOS 3\Rodrigo_David_Raffo_Fabio_Final_Algoritmos_3\Login admin y exportar excel\MinimalApiDapper\bin\Debug\net8.0\System.IO.Packaging.dll
+F:\ABRIR ESTA CARPETA FINAL ALGORITMOS 3\Rodrigo_David_Raffo_Fabio_Final_Algoritmos_3\Login admin y exportar excel\MinimalApiDapper\bin\Debug\net8.0\System.Memory.Data.dll
+F:\ABRIR ESTA CARPETA FINAL ALGORITMOS 3\Rodrigo_David_Raffo_Fabio_Final_Algoritmos_3\Login admin y exportar excel\MinimalApiDapper\bin\Debug\net8.0\System.Runtime.Caching.dll
+F:\ABRIR ESTA CARPETA FINAL ALGORITMOS 3\Rodrigo_David_Raffo_Fabio_Final_Algoritmos_3\Login admin y exportar excel\MinimalApiDapper\bin\Debug\net8.0\System.Security.Cryptography.ProtectedData.dll
+F:\ABRIR ESTA CARPETA FINAL ALGORITMOS 3\Rodrigo_David_Raffo_Fabio_Final_Algoritmos_3\Login admin y exportar excel\MinimalApiDapper\bin\Debug\net8.0\de\Microsoft.Data.SqlClient.resources.dll
+F:\ABRIR ESTA CARPETA FINAL ALGORITMOS 3\Rodrigo_David_Raffo_Fabio_Final_Algoritmos_3\Login admin y exportar excel\MinimalApiDapper\bin\Debug\net8.0\es\Microsoft.Data.SqlClient.resources.dll
+F:\ABRIR ESTA CARPETA FINAL ALGORITMOS 3\Rodrigo_David_Raffo_Fabio_Final_Algoritmos_3\Login admin y exportar excel\MinimalApiDapper\bin\Debug\net8.0\fr\Microsoft.Data.SqlClient.resources.dll
+F:\ABRIR ESTA CARPETA FINAL ALGORITMOS 3\Rodrigo_David_Raffo_Fabio_Final_Algoritmos_3\Login admin y exportar excel\MinimalApiDapper\bin\Debug\net8.0\it\Microsoft.Data.SqlClient.resources.dll
+F:\ABRIR ESTA CARPETA FINAL ALGORITMOS 3\Rodrigo_David_Raffo_Fabio_Final_Algoritmos_3\Login admin y exportar excel\MinimalApiDapper\bin\Debug\net8.0\ja\Microsoft.Data.SqlClient.resources.dll
+F:\ABRIR ESTA CARPETA FINAL ALGORITMOS 3\Rodrigo_David_Raffo_Fabio_Final_Algoritmos_3\Login admin y exportar excel\MinimalApiDapper\bin\Debug\net8.0\ko\Microsoft.Data.SqlClient.resources.dll
+F:\ABRIR ESTA CARPETA FINAL ALGORITMOS 3\Rodrigo_David_Raffo_Fabio_Final_Algoritmos_3\Login admin y exportar excel\MinimalApiDapper\bin\Debug\net8.0\pt-BR\Microsoft.Data.SqlClient.resources.dll
+F:\ABRIR ESTA CARPETA FINAL ALGORITMOS 3\Rodrigo_David_Raffo_Fabio_Final_Algoritmos_3\Login admin y exportar excel\MinimalApiDapper\bin\Debug\net8.0\ru\Microsoft.Data.SqlClient.resources.dll
+F:\ABRIR ESTA CARPETA FINAL ALGORITMOS 3\Rodrigo_David_Raffo_Fabio_Final_Algoritmos_3\Login admin y exportar excel\MinimalApiDapper\bin\Debug\net8.0\zh-Hans\Microsoft.Data.SqlClient.resources.dll
+F:\ABRIR ESTA CARPETA FINAL ALGORITMOS 3\Rodrigo_David_Raffo_Fabio_Final_Algoritmos_3\Login admin y exportar excel\MinimalApiDapper\bin\Debug\net8.0\zh-Hant\Microsoft.Data.SqlClient.resources.dll
+F:\ABRIR ESTA CARPETA FINAL ALGORITMOS 3\Rodrigo_David_Raffo_Fabio_Final_Algoritmos_3\Login admin y exportar excel\MinimalApiDapper\bin\Debug\net8.0\runtimes\unix\lib\net8.0\Microsoft.Data.SqlClient.dll
+F:\ABRIR ESTA CARPETA FINAL ALGORITMOS 3\Rodrigo_David_Raffo_Fabio_Final_Algoritmos_3\Login admin y exportar excel\MinimalApiDapper\bin\Debug\net8.0\runtimes\win\lib\net8.0\Microsoft.Data.SqlClient.dll
+F:\ABRIR ESTA CARPETA FINAL ALGORITMOS 3\Rodrigo_David_Raffo_Fabio_Final_Algoritmos_3\Login admin y exportar excel\MinimalApiDapper\bin\Debug\net8.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+F:\ABRIR ESTA CARPETA FINAL ALGORITMOS 3\Rodrigo_David_Raffo_Fabio_Final_Algoritmos_3\Login admin y exportar excel\MinimalApiDapper\bin\Debug\net8.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+F:\ABRIR ESTA CARPETA FINAL ALGORITMOS 3\Rodrigo_David_Raffo_Fabio_Final_Algoritmos_3\Login admin y exportar excel\MinimalApiDapper\bin\Debug\net8.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+F:\ABRIR ESTA CARPETA FINAL ALGORITMOS 3\Rodrigo_David_Raffo_Fabio_Final_Algoritmos_3\Login admin y exportar excel\MinimalApiDapper\bin\Debug\net8.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+F:\ABRIR ESTA CARPETA FINAL ALGORITMOS 3\Rodrigo_David_Raffo_Fabio_Final_Algoritmos_3\Login admin y exportar excel\MinimalApiDapper\bin\Debug\net8.0\runtimes\win\lib\net8.0\System.Runtime.Caching.dll
+F:\ABRIR ESTA CARPETA FINAL ALGORITMOS 3\Rodrigo_David_Raffo_Fabio_Final_Algoritmos_3\Login admin y exportar excel\MinimalApiDapper\obj\Debug\net8.0\MinimalApiDapper.csproj.AssemblyReference.cache
+F:\ABRIR ESTA CARPETA FINAL ALGORITMOS 3\Rodrigo_David_Raffo_Fabio_Final_Algoritmos_3\Login admin y exportar excel\MinimalApiDapper\obj\Debug\net8.0\rpswa.dswa.cache.json
+F:\ABRIR ESTA CARPETA FINAL ALGORITMOS 3\Rodrigo_David_Raffo_Fabio_Final_Algoritmos_3\Login admin y exportar excel\MinimalApiDapper\obj\Debug\net8.0\MinimalApiDapper.GeneratedMSBuildEditorConfig.editorconfig
+F:\ABRIR ESTA CARPETA FINAL ALGORITMOS 3\Rodrigo_David_Raffo_Fabio_Final_Algoritmos_3\Login admin y exportar excel\MinimalApiDapper\obj\Debug\net8.0\MinimalApiDapper.AssemblyInfoInputs.cache
+F:\ABRIR ESTA CARPETA FINAL ALGORITMOS 3\Rodrigo_David_Raffo_Fabio_Final_Algoritmos_3\Login admin y exportar excel\MinimalApiDapper\obj\Debug\net8.0\MinimalApiDapper.AssemblyInfo.cs
+F:\ABRIR ESTA CARPETA FINAL ALGORITMOS 3\Rodrigo_David_Raffo_Fabio_Final_Algoritmos_3\Login admin y exportar excel\MinimalApiDapper\obj\Debug\net8.0\MinimalApiDapper.csproj.CoreCompileInputs.cache
+F:\ABRIR ESTA CARPETA FINAL ALGORITMOS 3\Rodrigo_David_Raffo_Fabio_Final_Algoritmos_3\Login admin y exportar excel\MinimalApiDapper\obj\Debug\net8.0\MinimalApiDapper.MvcApplicationPartsAssemblyInfo.cs
+F:\ABRIR ESTA CARPETA FINAL ALGORITMOS 3\Rodrigo_David_Raffo_Fabio_Final_Algoritmos_3\Login admin y exportar excel\MinimalApiDapper\obj\Debug\net8.0\MinimalApiDapper.MvcApplicationPartsAssemblyInfo.cache
+F:\ABRIR ESTA CARPETA FINAL ALGORITMOS 3\Rodrigo_David_Raffo_Fabio_Final_Algoritmos_3\Login admin y exportar excel\MinimalApiDapper\obj\Debug\net8.0\rjimswa.dswa.cache.json
+F:\ABRIR ESTA CARPETA FINAL ALGORITMOS 3\Rodrigo_David_Raffo_Fabio_Final_Algoritmos_3\Login admin y exportar excel\MinimalApiDapper\obj\Debug\net8.0\rjsmrazor.dswa.cache.json
+F:\ABRIR ESTA CARPETA FINAL ALGORITMOS 3\Rodrigo_David_Raffo_Fabio_Final_Algoritmos_3\Login admin y exportar excel\MinimalApiDapper\obj\Debug\net8.0\rjsmcshtml.dswa.cache.json
+F:\ABRIR ESTA CARPETA FINAL ALGORITMOS 3\Rodrigo_David_Raffo_Fabio_Final_Algoritmos_3\Login admin y exportar excel\MinimalApiDapper\obj\Debug\net8.0\scopedcss\bundle\MinimalApiDapper.styles.css
+F:\ABRIR ESTA CARPETA FINAL ALGORITMOS 3\Rodrigo_David_Raffo_Fabio_Final_Algoritmos_3\Login admin y exportar excel\MinimalApiDapper\obj\Debug\net8.0\staticwebassets.build.json
+F:\ABRIR ESTA CARPETA FINAL ALGORITMOS 3\Rodrigo_David_Raffo_Fabio_Final_Algoritmos_3\Login admin y exportar excel\MinimalApiDapper\obj\Debug\net8.0\staticwebassets.build.json.cache
+F:\ABRIR ESTA CARPETA FINAL ALGORITMOS 3\Rodrigo_David_Raffo_Fabio_Final_Algoritmos_3\Login admin y exportar excel\MinimalApiDapper\obj\Debug\net8.0\staticwebassets.development.json
+F:\ABRIR ESTA CARPETA FINAL ALGORITMOS 3\Rodrigo_David_Raffo_Fabio_Final_Algoritmos_3\Login admin y exportar excel\MinimalApiDapper\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+F:\ABRIR ESTA CARPETA FINAL ALGORITMOS 3\Rodrigo_David_Raffo_Fabio_Final_Algoritmos_3\Login admin y exportar excel\MinimalApiDapper\obj\Debug\net8.0\MinimalA.7DF8AD46.Up2Date
+F:\ABRIR ESTA CARPETA FINAL ALGORITMOS 3\Rodrigo_David_Raffo_Fabio_Final_Algoritmos_3\Login admin y exportar excel\MinimalApiDapper\obj\Debug\net8.0\MinimalApiDapper.dll
+F:\ABRIR ESTA CARPETA FINAL ALGORITMOS 3\Rodrigo_David_Raffo_Fabio_Final_Algoritmos_3\Login admin y exportar excel\MinimalApiDapper\obj\Debug\net8.0\refint\MinimalApiDapper.dll
+F:\ABRIR ESTA CARPETA FINAL ALGORITMOS 3\Rodrigo_David_Raffo_Fabio_Final_Algoritmos_3\Login admin y exportar excel\MinimalApiDapper\obj\Debug\net8.0\MinimalApiDapper.pdb
+F:\ABRIR ESTA CARPETA FINAL ALGORITMOS 3\Rodrigo_David_Raffo_Fabio_Final_Algoritmos_3\Login admin y exportar excel\MinimalApiDapper\obj\Debug\net8.0\MinimalApiDapper.genruntimeconfig.cache
+F:\ABRIR ESTA CARPETA FINAL ALGORITMOS 3\Rodrigo_David_Raffo_Fabio_Final_Algoritmos_3\Login admin y exportar excel\MinimalApiDapper\obj\Debug\net8.0\ref\MinimalApiDapper.dll
