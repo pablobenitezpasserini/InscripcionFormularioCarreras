@@ -74,9 +74,9 @@ public class Program
         {
             var result = await service.ExportarEstudiantesExcelAsync();
 
-            if (result.Success) //Esto le devuelve al frontend el archivo de excel, el tipo indicado de documento y el nombre por defecto del archivo
+            if (result.Success)
             {
-                return Results.File(result.Data!, "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", "Estudiantes.xlsx");
+                return Results.Ok(result.Data);
             }
 
             return Results.BadRequest(new { message = result.Error });

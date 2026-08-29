@@ -4,6 +4,7 @@ using MinimalApiDapper.Models;
 using System.Data;
 using System.Threading.Tasks;
 using System.Collections.Generic;
+using MinimalApiDapper.DTO;
 
 namespace MinimalApiDapper.Data;
 
@@ -30,9 +31,9 @@ public class AdminRepository
         return parameters.Get<string>("@Mensaje");
     }
 
-    public async Task<IEnumerable<EstudianteCarreraInfoDto>> ListarEstudiantesCarrerasInfoAcaAsync()
+    public async Task<IEnumerable<EstudianteExportacionDto>> ListarEstudiantesCarrerasInfoAcaAsync()
     {
         using var connection = new SqlConnection(_connectionString);
-        return await connection.QueryAsync<EstudianteCarreraInfoDto>("sp_Listar_Estudiantes_Carreras_InfAca",commandType: CommandType.StoredProcedure);
+        return await connection.QueryAsync<EstudianteExportacionDto>("SP_exportacionDelExcel",commandType: CommandType.StoredProcedure);
     }
 }

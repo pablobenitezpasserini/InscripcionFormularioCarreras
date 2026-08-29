@@ -1,49 +1,84 @@
-import api from "./api.js";
+import api from "../api.js";
 
 document.getElementById("btnGenerarListado")
     .addEventListener("click", function () {
 
-    if (!document.getElementById("btnExportarExcel")) {
+        if (!document.getElementById("btnExportarExcel")) {
 
-        const nuevoBoton = document.createElement("button");
-        nuevoBoton.textContent = "Exportar Datos a Excel";
-        nuevoBoton.id = "btnExportarExcel";
+            const nuevoBoton = document.createElement("button");
 
-        // Exportar datos a Excel
-        nuevoBoton.addEventListener("click", async function () {
+            nuevoBoton.textContent = "Exportar Datos a Excel";
+            nuevoBoton.id = "btnExportarExcel";
 
-            try
-            {
-                const response = await api.get(`/api/admin/exportar-estudiantes`,
-                    { responseType: "blob" }
-                ); //Llamada a la API. Se espera un binario (en este caso, un archivo Excel)
+            nuevoBoton.addEventListener("click", async function () {
 
-                const url = window.URL.createObjectURL(new Blob([response.data])); //Se crea una URL temporal para el archivo recibido
+                try {
 
-                const link = document.createElement("a"); //Se crea un elemento <a> para descargar el archivo
-                link.href = url; //Se asocia este elemento al URL creado anteriormente
-                link.download = "Estudiantes.xlsx"; //Se le indica que es una descarga y el nombre por defecto
-                link.click(); //Se simula un click en el enlace para iniciar la descarga
-                window.URL.revokeObjectURL(url); //Se libera la URL temporal
-            }
-            catch (error)
-            {
+                    // Obtener los datos desde la API
+                    const response = await api.get("/api/admin/exportar-estudiantes");
 
-            if (error.response && error.response.status === 400) { //En caso de recibir un BadRequest o error 400 (generalmente cuando no hay alumons inscriptos)
+                    const estudiantes = response.data;
 
-                const text = await error.response.data.text();
-                const errorObj = JSON.parse(text);
-                alert(errorObj.message);
+                    // Crear libro de Excel
+                    const workbook = new ExcelJS.Workbook();
 
-            } else { //Error generico. Normalmente sucede cuando el backend no está corriendo o hay un error inesperado
-                alert("Error al exportar archivo");
-            }
+                    // Crear hoja
+                    const worksheet = workbook.addWorksheet("Estudiantes");
+
+                    // Encabezados
+                    worksheet.columns = [
+                        { header: "Marca temporal", key: "fechaInscripcion", width: 30 },
+                        { header: "Correo electrónico", key: "correoElectronico", width: 30 },
+                        { header: "Carrera inscripta", key: "carreraInscripta", width: 35 },
+                        { header: "Nombre y apellido", key: "nombreApellido", width: 30 },
+                        { header: "DNI", key: "dni", width: 15 },
+                        { header: "Teléfono", key: "telefono", width: 20 },
+                        { header: "Fecha de nacimiento", key: "fechaNacimiento", width: 20 },
+                        { header: "Edad al 30/06/2026", key: "edadActual"},
+                        { header: "Dirección", key: "direccion", width: 35 },
+                        { header: "Posee", key: "posee", width: 25 },
+                        { header: "Título secundario", key: "tituloSecundario", width: 30 },
+                        { header: "Año de egreso", key: "añoEgreso", width: 18 }
+                    ];
+
+                    // Agregar estudiantes
+                    estudiantes.forEach(estudiante => {
+                        worksheet.addRow(estudiante);
+                    });
+
+                    // Generar archivo
+                    const buffer = await workbook.xlsx.writeBuffer();
+
+                    // Crear descarga
+                    const blob = new Blob(
+                        [buffer],
+                        {
+                            type: "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+                        }
+                    );
+
+                    const url = window.URL.createObjectURL(blob);
+
+                    const link = document.createElement("a");
+
+                    link.href = url;
+                    link.download = "Estudiantes.xlsx";
+
+                    link.click();
+
+                    window.URL.revokeObjectURL(url);
+
+                }
+                catch (error) {
+
+                    console.error("Error al exportar:", error);
+
+                    alert("Error al exportar archivo");
+                }
+
+            });
+
+            document.querySelector(".botones")
+                .appendChild(nuevoBoton);
         }
-
-        });
-
-        document.querySelector(".botones")
-            .appendChild(nuevoBoton);
-    }
-
-});
+    });

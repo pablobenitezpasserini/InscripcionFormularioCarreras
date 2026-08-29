@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MinimalApiDapper")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f3610694bf5d64ca14f85c3500a7bd851d2a156b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2baaff5476926b26eb8972fa2af8c516e1966cd3")]
 [assembly: System.Reflection.AssemblyProductAttribute("MinimalApiDapper")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MinimalApiDapper")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
