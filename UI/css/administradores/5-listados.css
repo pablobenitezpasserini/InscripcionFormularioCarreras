@@ -269,3 +269,27 @@ a:hover {
     text-decoration: none;     /* sigue sin subrayado al pasar el mouse */
     color: white;            /* mantiene el color también */
 }
+
+/* seccion de la tabla */
+.tabla-container {
+    width: 100%;
+    overflow-x: auto;
+}
+
+table {
+    width: max-content;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    border: 1px solid #dadce0;
+    padding: 8px;
+    text-align: left;
+    white-space: nowrap;
+}
+
+th {
+    background-color: #f1f3f4;
+    color: #202124;
+}
