@@ -7,6 +7,7 @@ using MinimalApiDapper.Models;
 using Microsoft.AspNetCore.Http;
 using System;
 using Microsoft.Extensions.Configuration;
+using MinimalApiDapper.DTO.Admin;
 
 namespace MinimalApiDapper;
 
@@ -61,9 +62,9 @@ public class Program
         // Get services
         var alumnoService = app.Services.GetRequiredService<IAdminService>();
 
-        app.MapPost("/api/admin/login", async (LoginRequest data, IAdminService service) =>
+        app.MapPost("/api/admin/login", async (AdminLoginRequestDto data, IAdminService service) =>
         {
-            var result = await service.LoguearAsync(data.usuario, data.contrasena);
+            var result = await service.LoguearAsync(data.Usuario, data.Contrasena);
 
             if (result.Success)
             {
@@ -88,5 +89,3 @@ public class Program
         app.Run();
     }
 }
-
-public record LoginRequest(string usuario, string contrasena); //Necesario para recibir los datos del login en el endpoint de login
