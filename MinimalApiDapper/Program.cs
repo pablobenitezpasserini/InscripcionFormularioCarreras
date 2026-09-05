@@ -43,6 +43,9 @@ public class Program
             app.UseSwagger();
             app.UseSwaggerUI();
         }
+
+        app.UseDefaultFiles();
+        app.UseStaticFiles();
         //No se olviden hacer en cualquier navegador localhost:<puerto>/swagger para probar los endpoints sin necesidad de usar la pagina web
         app.UseHttpsRedirection();
 

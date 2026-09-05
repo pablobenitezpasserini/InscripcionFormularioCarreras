@@ -1,0 +1,271 @@
+/* Estilo general del body */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #123474;
+    display: flex;
+    justify-content: center;
+    padding: 40px;
+    margin: 0;
+}
+
+/* Contenedor de formularios y menú */
+.form-container {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 650px;
+    padding: 30px 40px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+/* Banner */
+.banner {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 25px;
+}
+
+/* Títulos */
+h2 {
+    color: #202124;
+    margin-bottom: 10px;
+}
+
+/* Párrafos */
+p {
+    color: #5f6368;
+    margin-bottom: 30px;
+}
+
+/* Labels */
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+    color: #202124;
+    text-align: left; /* Alineación a la izquierda para los labels */
+}
+
+/* Inputs y selects */
+input, select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #dadce0;
+    font-size: 15px;
+    box-sizing: border-box;
+}
+
+input:focus, select:focus {
+    outline: none;
+    border-color: #1a73e8;
+    box-shadow: 0 0 2px #1a73e8;
+}
+
+/* Botones */
+button {
+    background-color: #1a73e8;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+#login{
+    background-color: green;
+}
+
+#login:hover{
+    background-color: darkgreen;
+}
+
+#cancelLogin{
+    background-color: red;
+}
+
+#cancelLogin:hover{
+    background-color: darkred;
+}
+
+#reg{
+    background-color: green;
+}
+
+#reg:hover{
+    background-color: darkgreen;
+}
+
+#cancelRegister{
+    background-color: red;
+}
+
+#cancelRegister:hover{
+    background-color: darkred;
+}
+
+#logout{
+    background-color: red;
+}
+
+#logout:hover{
+    background-color: darkred;
+}
+
+button:hover {
+    background-color: #155ab6;
+}
+
+/* Botones de home (iniciar sesión / registrarse) */
+#home button {
+    width: 45%;
+    margin: 10px 5px;
+}
+
+/* Responsivo: pantallas medianas */
+@media (max-width: 768px) {
+    body {
+        padding: 20px;
+    }
+    .form-container {
+        padding: 25px 20px;
+    }
+    h2 {
+        font-size: 20px;
+    }
+    input, select, button {
+        font-size: 14px;
+        padding: 8px;
+    }
+    #home button {
+        width: 100%;
+        margin: 10px 0;
+    }
+}
+
+/* Responsivo: pantallas pequeñas */
+@media (max-width: 480px) {
+    .form-container {
+        padding: 20px 15px;
+        border-radius: 0;
+        box-shadow: none;
+    }
+    h2 {
+        font-size: 18px;
+    }
+    button {
+        padding: 10px;
+        font-size: 15px;
+    }
+}
+
+h3 {
+    text-align: left;
+}
+
+/* Corrige la apariencia de los botones con enlaces o hipervínculos */
+a {
+    background-color: #1a73e8;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+    margin-bottom: 10px;
+    height: 150px;
+    text-decoration: none;     /* quita el subrayado */
+}
+
+a:hover {
+    background-color: #155ab6;
+    text-decoration: none;     /* sigue sin subrayado al pasar el mouse */
+    color: white;            /* mantiene el color también */
+}
+
+.verde {
+    background-color: green;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+    margin-bottom: 10px;
+    height: 150px;
+    text-decoration: none;     /* quita el subrayado */
+}
+
+.verde:hover{
+    background-color: darkgreen;
+    text-decoration: none;     /* sigue sin subrayado al pasar el mouse */
+    color: white;            /* mantiene el color también */
+}
+
+.azul {
+    background-color: blue;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+    margin-bottom: 10px;
+    height: 150px;
+    text-decoration: none;     /* quita el subrayado */
+}
+
+.azul:hover{
+    background-color: darkblue;
+    text-decoration: none;     /* sigue sin subrayado al pasar el mouse */
+    color: white;            /* mantiene el color también */
+}
+
+.rojo {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+    margin-bottom: 10px;
+    height: 150px;
+    text-decoration: none;     /* quita el subrayado */
+}
+
+.rojo:hover{
+    background-color: darkred;
+    text-decoration: none;     /* sigue sin subrayado al pasar el mouse */
+    color: white;            /* mantiene el color también */
+}
+
+.gris {
+    background-color: grey;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+    margin-bottom: 10px;
+    height: 150px;
+    text-decoration: none;     /* quita el subrayado */
+}
+
+.gris:hover{
+    background-color: darkgrey;
+    text-decoration: none;     /* sigue sin subrayado al pasar el mouse */
+    color: white;            /* mantiene el color también */
+}

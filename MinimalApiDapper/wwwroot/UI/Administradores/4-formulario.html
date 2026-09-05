@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Formulario</title>
+        <link rel="icon" href="../img/administradores/favicon.ico" type="image/ico">
+        <link rel="stylesheet" href="../css/administradores/4-formulario.css">
+    </head>
+    <body>
+        <div class="form-container">
+            <!-- Banner -->
+            <img src="../img/administradores/banner.jpg" alt="Banner principal" class="banner">
+
+            <h2>Formulario</h2>
+            <hr>
+            <br>
+
+            <label for="formulario">&#9679; Seleccione un formulario:</label>
+            <select id="formulario" name="formulario" required>
+                <option value="" disabled selected>Lista de Formularios.</option>
+                <option value="formulario2026">Formulario de Inscripción 2026</option>
+            </select>
+        
+            <label for="habilitacion">&#9679; Habilitar o Deshabilitar</label>
+            <label><input type="radio" name="habilitar" value="habilitar" required> Habilitar</label><br>
+            <label><input type="radio" name="deshabilitar" value="deshabilitar"> Deshabilitar</label><br>
+
+            <button type="submit">Enviar</button>
+
+            <hr>
+            <br>
+            <a href="menu.html" class="gris">Volver al menú</a>
+
+        </div>
+        <script>
+            // Verificar sesión
+            if (localStorage.getItem("logueado") !== "true") {
+                alert("⛔ Debe iniciar sesión para acceder a la opción deseada.");
+                window.location.href = "admin.html";
+            }
+        </script>
+        <script src="js/admin.js"></script>
+    </body>
+</html>

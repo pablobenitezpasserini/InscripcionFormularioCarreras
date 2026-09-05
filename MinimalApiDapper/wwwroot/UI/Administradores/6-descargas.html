@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <title>Descargas</title>
+
+        <link rel="icon" href="../img/administradores/favicon.ico" type="image/ico">
+        <link rel="stylesheet" href="../css/administradores/6-descargas.css">
+
+        <script src="https://cdn.jsdelivr.net/npm/exceljs@4.4.0/dist/exceljs.min.js"></script>
+        <script type="module" src="../js/administradores/6-descargas.js"></script>
+    </head>
+    <body>
+        <div class="form-container">
+            <div class="botones">
+            <!-- Banner -->
+            <img src="../img/administradores/banner.jpg" alt="Banner principal" class="banner">
+
+            <h2>Descargas</h2>
+            
+            <button id="btnGenerarListado">Generar listado</button>
+            </div>
+        <hr>
+        <br>
+        <a href="menu.html" class="gris">Volver al menú</a>
+
+        </div>
+        <script>
+            // Verificar sesión
+            if (localStorage.getItem("logueado") !== "true") {
+                alert("⛔ Debe iniciar sesión para acceder a la opción deseada.");
+                window.location.href = "admin.html";
+            }
+        </script>
+    </body>
+</html>
