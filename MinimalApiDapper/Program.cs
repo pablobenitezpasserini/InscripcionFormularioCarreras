@@ -8,6 +8,9 @@ using Microsoft.AspNetCore.Http;
 using System;
 using Microsoft.Extensions.Configuration;
 using MinimalApiDapper.DTO.Admin;
+using MinimalApiDapper.Service;
+using MinimalApiDapper.Interfaces;
+using MinimalApiDapper.DTO.HabilitacionFormulario;
 
 namespace MinimalApiDapper;
 
@@ -35,6 +38,10 @@ public class Program
         builder.Services.AddSingleton<AdminRepository>(_ => new
         AdminRepository(connectionString));
         builder.Services.AddSingleton<IAdminService, AdminService>();
+        
+        builder.Services.AddSingleton<HabilitacionFormularioRepository>(_ => new
+        HabilitacionFormularioRepository(connectionString));
+        builder.Services.AddSingleton<IHabilitacionFormularioService, HabilitacionFormularioService>();
 
         var app = builder.Build();
 
@@ -86,6 +93,64 @@ public class Program
             return Results.BadRequest(new { message = result.Error });
         });
 
+        //endpoints habilitacionFormulario
+        app.MapPost("/api/admin/formularios", async (CrearHabilitacionFormularioDto data, IHabilitacionFormularioService service) =>
+        {
+            var result = await service.CrearAsync(data);
+
+            if (!result.Success)
+            {
+                return Results.BadRequest(new
+                {
+                    mensaje = result.Error
+                });
+            }
+
+            return Results.Ok(new
+            {
+                mensaje = "Formulario creado correctamente."
+            });
+        }
+        );
+
+        app.MapPut("/api/admin/formularios/{id}", async (int id, EditarHabilitacionFormularioDto data, IHabilitacionFormularioService service) =>
+        {
+            var result = await service.EditarAsync(id, data);
+
+            if (!result.Success)
+            {
+                return Results.BadRequest(new
+                {
+                    mensaje = result.Error
+                });
+            }
+
+            return Results.Ok(new
+            {
+                mensaje = "Formulario actualizado correctamente."   
+            });
+        }
+        );
+
+        app.MapDelete("/api/admin/formularios/{id}", async (int id, IHabilitacionFormularioService service) =>
+        {
+            var result = await service.EliminarAsync(id);
+
+            if(!result.Success)
+            {
+                return Results.BadRequest(new
+                {
+                    mensaje = result.Error
+                });
+            }
+
+            return Results.Ok(new
+            {
+                mensaje = "Formulario eliminado correctamente."
+            });
+        }
+        );
+        
         app.Run();
     }
 }

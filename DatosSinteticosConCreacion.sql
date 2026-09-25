@@ -74,7 +74,12 @@ CREATE TABLE Habilitacion_Formulario
     ID_Hab_Form INT IDENTITY(1,1) NOT NULL PRIMARY KEY,
     Hab_Form_Año INT NOT NULL UNIQUE,
     Hab_Form_Fecha_Inicio DATE NOT NULL,
-    Hab_Form_Fecha_Cierre DATE NOT NULL
+    Hab_Form_Fecha_Cierre DATE NOT NULL,
+    Hab_Form_Estado VARCHAR(20) NOT NULL
+        CONSTRAINT DF_Hab_Form_Estado DEFAULT 'DESHABILITADO',
+
+    CONSTRAINT CK_Hab_Form_Estado
+        CHECK (Hab_Form_Estado IN ('HABILITADO', 'DESHABILITADO'))
 );
 GO
 
@@ -448,7 +453,7 @@ GO
    PROCEDIMIENTOS - HABILITACION DE FORMULARIO
    ============================================================ */
 
-CREATE PROCEDURE sp_Insert_Habilitacion_Formulario
+CREATE OR ALTER PROCEDURE sp_Insert_Habilitacion_Formulario
     @Hab_Form_Año INT,
     @Hab_Form_Fecha_Inicio DATE,
     @Hab_Form_Fecha_Cierre DATE
@@ -456,36 +461,185 @@ AS
 BEGIN
     SET NOCOUNT ON;
 
-    INSERT INTO Habilitacion_Formulario
-        (Hab_Form_Año, Hab_Form_Fecha_Inicio, Hab_Form_Fecha_Cierre)
-    VALUES
-        (@Hab_Form_Año, @Hab_Form_Fecha_Inicio, @Hab_Form_Fecha_Cierre);
+    IF @Hab_Form_Año IS NULL
+    BEGIN
+        RAISERROR('El año del formulario no puede ser nulo', 16, 1);
+        RETURN;
+    END
+
+    IF @Hab_Form_Fecha_Inicio IS NULL
+    BEGIN
+        RAISERROR('La fecha de inicio no puede ser nula', 16, 1);
+        RETURN;
+    END
+
+    IF @Hab_Form_Fecha_Cierre IS NULL
+    BEGIN
+        RAISERROR('La fecha de cierre no puede ser nula', 16, 1);
+        RETURN;
+    END
+
+    IF @Hab_Form_Fecha_Inicio >= @Hab_Form_Fecha_Cierre
+    BEGIN
+        RAISERROR('La fecha de inicio debe ser anterior a la fecha de cierre', 16, 1);
+        RETURN;
+    END
+
+    IF (SELECT COUNT(*) FROM Habilitacion_Formulario) >= 2
+    BEGIN
+          RAISERROR('No pueden existir más de dos formularios', 16, 1);
+          RETURN;
+   END
+
+
+    BEGIN TRY
+
+        INSERT INTO Habilitacion_Formulario
+        (
+            Hab_Form_Año,
+            Hab_Form_Fecha_Inicio,
+            Hab_Form_Fecha_Cierre,
+            Hab_Form_Estado
+        )
+        VALUES
+        (
+            @Hab_Form_Año,
+            @Hab_Form_Fecha_Inicio,
+            @Hab_Form_Fecha_Cierre,
+            'DESHABILITADO'
+        );
+
+    END TRY
+    BEGIN CATCH
+
+        RAISERROR('Hubo un error inesperado al crear el formulario', 16, 1);
+        RETURN;
+
+    END CATCH
 END;
 GO
 
-CREATE PROCEDURE sp_Update_Habilitacion_Formulario
+CREATE OR ALTER PROCEDURE sp_Update_Habilitacion_Formulario
     @ID_Hab_Form INT,
     @Hab_Form_Fecha_Inicio DATE,
-    @Hab_Form_Fecha_Cierre DATE
+    @Hab_Form_Fecha_Cierre DATE,
+    @Hab_Form_Estado VARCHAR(20)
 AS
 BEGIN
     SET NOCOUNT ON;
 
-    UPDATE Habilitacion_Formulario
-    SET Hab_Form_Fecha_Inicio = @Hab_Form_Fecha_Inicio,
-        Hab_Form_Fecha_Cierre = @Hab_Form_Fecha_Cierre
-    WHERE ID_Hab_Form = @ID_Hab_Form;
+    IF @ID_Hab_Form IS NULL
+    BEGIN
+        RAISERROR('El ID del formulario no puede ser nulo', 16, 1);
+        RETURN;
+    END
+
+    IF @Hab_Form_Fecha_Inicio IS NULL
+    BEGIN
+        RAISERROR('La fecha de inicio no puede ser nula', 16, 1);
+        RETURN;
+    END
+
+    IF @Hab_Form_Fecha_Cierre IS NULL
+    BEGIN
+        RAISERROR('La fecha de cierre no puede ser nula', 16, 1);
+        RETURN;
+    END
+
+    IF @Hab_Form_Estado IS NULL
+    BEGIN
+        RAISERROR('El estado del formulario no puede ser nulo', 16, 1);
+        RETURN;
+    END
+
+    IF @Hab_Form_Fecha_Inicio >= @Hab_Form_Fecha_Cierre
+    BEGIN
+        RAISERROR('La fecha de inicio debe ser anterior a la fecha de cierre', 16, 1);
+        RETURN;
+    END
+
+    IF @Hab_Form_Estado NOT IN ('HABILITADO', 'DESHABILITADO')
+    BEGIN
+        RAISERROR('El estado del formulario debe ser HABILITADO o DESHABILITADO', 16, 1);
+        RETURN;
+    END
+
+    IF @Hab_Form_Estado = 'HABILITADO'
+    AND EXISTS
+    (
+        SELECT 1
+        FROM Habilitacion_Formulario
+        WHERE Hab_Form_Estado = 'HABILITADO'
+          AND ID_Hab_Form <> @ID_Hab_Form
+    )
+    BEGIN
+        RAISERROR('Ya existe otro formulario habilitado', 16, 1);
+        RETURN;
+    END
+
+
+    IF NOT EXISTS (
+        SELECT 1
+        FROM Habilitacion_Formulario
+        WHERE ID_Hab_Form = @ID_Hab_Form
+    )
+    BEGIN
+        RAISERROR('El formulario ingresado no existe', 16, 1);
+        RETURN;
+    END
+
+    BEGIN TRY
+
+        UPDATE Habilitacion_Formulario
+        SET Hab_Form_Fecha_Inicio = @Hab_Form_Fecha_Inicio,
+            Hab_Form_Fecha_Cierre = @Hab_Form_Fecha_Cierre,
+            Hab_Form_Estado = @Hab_Form_Estado
+        WHERE ID_Hab_Form = @ID_Hab_Form;
+
+    END TRY
+    BEGIN CATCH
+
+        RAISERROR('Hubo un error inesperado al modificar el formulario', 16, 1);
+        RETURN;
+
+    END CATCH
 END;
 GO
 
-CREATE PROCEDURE sp_Delete_Habilitacion_Formulario
+CREATE OR ALTER PROCEDURE sp_Delete_Habilitacion_Formulario
     @ID_Hab_Form INT
 AS
 BEGIN
     SET NOCOUNT ON;
 
-    DELETE FROM Habilitacion_Formulario
-    WHERE ID_Hab_Form = @ID_Hab_Form;
+    IF @ID_Hab_Form IS NULL
+    BEGIN
+        RAISERROR('El ID del formulario no puede ser nulo', 16, 1);
+        RETURN;
+    END
+
+    IF NOT EXISTS (
+        SELECT 1
+        FROM Habilitacion_Formulario
+        WHERE ID_Hab_Form = @ID_Hab_Form
+    )
+    BEGIN
+        RAISERROR('El formulario ingresado no existe', 16, 1);
+        RETURN;
+    END
+
+    BEGIN TRY
+
+        DELETE FROM Habilitacion_Formulario
+        WHERE ID_Hab_Form = @ID_Hab_Form;
+
+    END TRY
+    BEGIN CATCH
+
+        RAISERROR('Hubo un error inesperado al eliminar el formulario', 16, 1);
+        RETURN;
+
+    END CATCH
 END;
 GO
 
