@@ -9,12 +9,13 @@ namespace MinimalApiDapper.Interfaces
 {
     public interface IHabilitacionFormularioService
     {
+        Task<Result<IEnumerable<HabilitacionFormulario>>> GetAllAsync();
         Task<Result<bool>> CrearAsync(CrearHabilitacionFormularioDto data);
 
         Task<Result<bool>> EditarAsync(int id, EditarHabilitacionFormularioDto data);
 
         Task<Result<bool>> EliminarAsync(int id);
 
-        Task<Result<bool>> EstaDisponibleAsync();
+        Task<Result<FormularioDisponibleDto>> EstaDisponibleAsync();
     }
 }

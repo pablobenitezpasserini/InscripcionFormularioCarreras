@@ -18,6 +18,20 @@ namespace MinimalApiDapper.Service
             _repository = repository;
         }
 
+        public async Task<Result<IEnumerable<HabilitacionFormulario>>> GetAllAsync()
+        {
+            try
+            {
+                var formularios = await _repository.ListarAsync();
+
+                return Result<IEnumerable<HabilitacionFormulario>>.Ok(formularios);
+            }
+            catch (SqlException ex)
+            {
+                return Result<IEnumerable<HabilitacionFormulario>>.Fail(ex.Message);
+            }
+        }
+
         public async Task<Result<bool>> CrearAsync(CrearHabilitacionFormularioDto data)
         {
             try
@@ -47,10 +61,10 @@ namespace MinimalApiDapper.Service
             {
                 var formulario = new HabilitacionFormulario
                 {
-                  ID_Hab_Form = id,
-                  Hab_Form_Fecha_Inicio = data.Hab_Form_Fecha_Inicio,
-                  Hab_Form_Fecha_Cierre = data.Hab_Form_Fecha_Cierre,
-                  Hab_Form_Estado = data.Hab_Form_Estado  
+                    ID_Hab_Form = id,
+                    Hab_Form_Fecha_Inicio = data.Hab_Form_Fecha_Inicio,
+                    Hab_Form_Fecha_Cierre = data.Hab_Form_Fecha_Cierre,
+                    Hab_Form_Estado = data.Hab_Form_Estado
                 };
 
                 await _repository.EditarAsync(formulario);
@@ -77,9 +91,37 @@ namespace MinimalApiDapper.Service
             }
         }
 
-        public Task<Result<bool>> EstaDisponibleAsync()
+        public async Task<Result<FormularioDisponibleDto>> EstaDisponibleAsync()
         {
-            throw new NotImplementedException();
+            try
+            {
+                IEnumerable<HabilitacionFormulario> formularios = await _repository.ListarAsync();
+
+                DateTime today = DateTime.Today;
+
+                foreach (var formulario in formularios)
+                {
+                    if ((formulario.Hab_Form_Fecha_Inicio <= today
+                        && formulario.Hab_Form_Fecha_Cierre >= today)
+                        || formulario.Hab_Form_Estado == "HABILITADO")
+                    {
+                        FormularioDisponibleDto formularioDto = new()
+                        {
+                            Año = formulario.Hab_Form_Año,
+                            FechaInicio = formulario.Hab_Form_Fecha_Inicio,
+                            FechaCierre = formulario.Hab_Form_Fecha_Cierre
+                        };
+
+                        return Result<FormularioDisponibleDto>.Ok(formularioDto);
+                    }
+                }
+
+                return Result<FormularioDisponibleDto>.Ok(null);
+            }
+            catch (SqlException ex)
+            {
+                return Result<FormularioDisponibleDto>.Fail(ex.Message);
+            }
         }
     }
 }

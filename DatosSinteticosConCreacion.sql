@@ -643,6 +643,21 @@ BEGIN
 END;
 GO
 
+CREATE OR ALTER PROCEDURE sp_Listar_Habilitacion_Formulario
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    SELECT
+        ID_Hab_Form,
+        Hab_Form_Año,
+        Hab_Form_Fecha_Inicio,
+        Hab_Form_Fecha_Cierre,
+        Hab_Form_Estado
+    FROM Habilitacion_Formulario;
+END;
+GO
+
 /* ============================================================
    PROCEDIMIENTOS - CARRERAS
    ============================================================ */

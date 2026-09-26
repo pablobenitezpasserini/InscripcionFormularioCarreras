@@ -6,6 +6,7 @@ using System;
 using System.IO;
 using System.Linq;
 using MinimalApiDapper.DTO;
+using Microsoft.Data.SqlClient;
 
 
 namespace MinimalApiDapper.Services;
@@ -45,4 +46,32 @@ public class AdminService : IAdminService
         return Result<IEnumerable<EstudianteExportacionDto>>.Ok(data);
     }
 
+    public async Task<Result<IEnumerable<Administrador>>> ListarAsync()
+    {
+        try
+        {
+            var administradores = await _adminRepository.ListarAsync();
+
+            return Result<IEnumerable<Administrador>>.Ok(administradores);
+        }
+        catch(SqlException ex)
+        {
+            return Result<IEnumerable<Administrador>>.Fail(ex.Message);
+        }
+    }
+
+    public Task<Result<bool>> CrearAsync(Administrador admin)
+    {
+        throw new NotImplementedException();
+    }
+
+    public Task<Result<bool>> EditarAsync(Administrador admin)
+    {
+        throw new NotImplementedException();
+    }
+
+    public Task<Result<bool>> EliminarAsync(int id)
+    {
+        throw new NotImplementedException();
+    }
 }

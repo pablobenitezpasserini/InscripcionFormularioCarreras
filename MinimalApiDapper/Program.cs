@@ -69,6 +69,21 @@ public class Program
         // Get services
         var alumnoService = app.Services.GetRequiredService<IAdminService>();
 
+        app.MapGet("/api/admin", async (IAdminService service) =>
+        {
+            var result = await service.ListarAsync();
+
+            if (result.Success)
+            {
+                return Results.Ok(result.Data);
+            }
+
+            return Results.BadRequest(new
+            {
+                mensaje = result.Error
+            });
+        });
+
         app.MapPost("/api/admin/login", async (AdminLoginRequestDto data, IAdminService service) =>
         {
             var result = await service.LoguearAsync(data.Usuario, data.Contrasena);
@@ -94,6 +109,21 @@ public class Program
         });
 
         //endpoints habilitacionFormulario
+        app.MapGet("/api/habilitacion-formulario", async (IHabilitacionFormularioService service) =>
+        {
+            var result = await service.GetAllAsync();
+
+            if (result.Success)
+            {
+                return Results.Ok(result.Data);
+            }
+
+            return Results.BadRequest(new
+            {
+                mensaje = result.Error
+            });
+        });
+
         app.MapPost("/api/admin/formularios", async (CrearHabilitacionFormularioDto data, IHabilitacionFormularioService service) =>
         {
             var result = await service.CrearAsync(data);
@@ -150,6 +180,21 @@ public class Program
             });
         }
         );
+
+        app.MapGet("/api/formulario/disponibilidad", async (IHabilitacionFormularioService service) =>
+        {
+            var result = await service.EstaDisponibleAsync();
+
+            if (result.Success)
+            {
+                return Results.Ok(result.Data);
+            }
+
+            return Results.BadRequest(new
+            {
+                mensaje = result.Error
+            });
+        });
         
         app.Run();
     }

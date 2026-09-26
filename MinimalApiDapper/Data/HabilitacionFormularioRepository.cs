@@ -54,9 +54,11 @@ namespace MinimalApiDapper.Data
             await connection.ExecuteAsync("sp_Delete_Habilitacion_Formulario", parameters, commandType: CommandType.StoredProcedure);
         }
 
-        public Task<IEnumerable<HabilitacionFormulario>> ListarAsync()
+        public async Task<IEnumerable<HabilitacionFormulario>> ListarAsync()
         {
-            throw new NotImplementedException();
+            using var connection = new SqlConnection(_connectionString);
+
+            return await connection.QueryAsync<HabilitacionFormulario>("sp_Listar_Habilitacion_Formulario", commandType: CommandType.StoredProcedure);
         }
     }
 }

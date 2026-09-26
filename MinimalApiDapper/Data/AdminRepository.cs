@@ -5,10 +5,11 @@ using System.Data;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using MinimalApiDapper.DTO;
+using MinimalApiDapper.Interfaces;
 
 namespace MinimalApiDapper.Data;
 
-public class AdminRepository
+public class AdminRepository : IAdminRepository
 {
     private readonly string _connectionString;
 
@@ -34,6 +35,29 @@ public class AdminRepository
     public async Task<IEnumerable<EstudianteExportacionDto>> ListarEstudiantesCarrerasInfoAcaAsync()
     {
         using var connection = new SqlConnection(_connectionString);
+        
         return await connection.QueryAsync<EstudianteExportacionDto>("SP_exportacionDelExcel",commandType: CommandType.StoredProcedure);
+    }
+
+    public async Task<IEnumerable<Administrador>> ListarAsync()
+    {
+        using var connection = new SqlConnection(_connectionString);
+
+        return await connection.QueryAsync<Administrador>("sp_Listar_Admin", commandType: CommandType.StoredProcedure);
+    }
+
+    public Task CrearAsync(Administrador admin)
+    {
+        throw new System.NotImplementedException();
+    }
+
+    public Task EditarAsync(Administrador admin)
+    {
+        throw new System.NotImplementedException();
+    }
+
+    public Task EliminarAsync(int id)
+    {
+        throw new System.NotImplementedException();
     }
 }
