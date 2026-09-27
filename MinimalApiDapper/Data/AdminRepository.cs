@@ -46,18 +46,45 @@ public class AdminRepository : IAdminRepository
         return await connection.QueryAsync<Administrador>("sp_Listar_Admin", commandType: CommandType.StoredProcedure);
     }
 
-    public Task CrearAsync(Administrador admin)
+    public async Task CrearAsync(Administrador admin)
     {
-        throw new System.NotImplementedException();
+        using var connection = new SqlConnection(_connectionString);
+
+        var parameters = new DynamicParameters();
+
+        parameters.Add("@Admin_Nom_Ape", admin.Admin_Nom_Ape);
+        parameters.Add("@Admin_DNI", admin.Admin_DNI);
+        parameters.Add("@Admin_Tipo_DNI", admin.Admin_Tipo_DNI);
+        parameters.Add("@Admin_Nom_Usuario", admin.Admin_Nom_Usuario);
+        parameters.Add("@Admin_Contraseña", admin.Admin_Contra);
+
+        await connection.ExecuteAsync("Agregar_Admin", parameters, commandType: CommandType.StoredProcedure);
     }
 
-    public Task EditarAsync(Administrador admin)
+    public async Task EditarAsync(Administrador admin)
     {
-        throw new System.NotImplementedException();
+        using var connection = new SqlConnection(_connectionString);
+        
+        var parameters = new DynamicParameters();
+
+        parameters.Add("@ID_Admin", admin.ID_Admin);
+        parameters.Add("@Nuevo_Admin_Nom_Ape", admin.Admin_Nom_Ape);
+        parameters.Add("@Nuevo_Admin_DNI", admin.Admin_DNI);
+        parameters.Add("@Nuevo_Admin_Tipo_DNI", admin.Admin_Tipo_DNI);
+        parameters.Add("@Nuevo_Admin_Nom_Usuario", admin.Admin_Nom_Usuario);
+        parameters.Add("@Nuevo_Admin_Contra", admin.Admin_Contra);
+
+        await connection.ExecuteAsync("Admin_Update", parameters, commandType: CommandType.StoredProcedure);
     }
 
-    public Task EliminarAsync(int id)
+    public async Task EliminarAsync(int id)
     {
-        throw new System.NotImplementedException();
+        using var connection = new SqlConnection(_connectionString);
+
+        var parameters = new DynamicParameters();
+
+        parameters.Add("@ID_Admin", id);
+
+        await connection.ExecuteAsync("Admin_Delete", parameters, commandType: CommandType.StoredProcedure);
     }
 }

@@ -38,7 +38,7 @@ public class Program
         builder.Services.AddSingleton<AdminRepository>(_ => new
         AdminRepository(connectionString));
         builder.Services.AddSingleton<IAdminService, AdminService>();
-        
+
         builder.Services.AddSingleton<HabilitacionFormularioRepository>(_ => new
         HabilitacionFormularioRepository(connectionString));
         builder.Services.AddSingleton<IHabilitacionFormularioService, HabilitacionFormularioService>();
@@ -69,6 +69,7 @@ public class Program
         // Get services
         var alumnoService = app.Services.GetRequiredService<IAdminService>();
 
+        //endpoints admin
         app.MapGet("/api/admin", async (IAdminService service) =>
         {
             var result = await service.ListarAsync();
@@ -106,6 +107,60 @@ public class Program
             }
 
             return Results.BadRequest(new { message = result.Error });
+        });
+
+        app.MapPost("/api/admin", async (CrearAdminDto admin, IAdminService service) =>
+        {
+            var result = await service.CrearAsync(admin);
+
+            if (result.Success)
+            {
+                return Results.Ok(new
+                {
+                    mensaje = "Administrador creado correctamente."
+                });
+            }
+
+            return Results.BadRequest(new
+            {
+                mensaje = result.Error
+            });
+        });
+
+        app.MapPut("/api/admin/{id}", async (int id, EditarAdminDto admin, IAdminService service) =>
+        {
+            var result = await service.EditarAsync(id, admin);
+
+            if (result.Success)
+            {
+                return Results.Ok(new
+                {
+                    mensaje = "Administrador modificado correctamente."
+                });
+            }
+
+            return Results.BadRequest(new
+            {
+                mensaje = result.Error
+            });
+        });
+
+        app.MapDelete("/api/admin/{id}", async (int id, IAdminService service) =>
+        {
+            var result = await service.EliminarAsync(id);
+
+            if (result.Success)
+            {
+                return Results.Ok(new
+                {
+                    mensaje = "Administrador eliminado correctamente."
+                });
+            }
+
+            return Results.BadRequest(new
+            {
+                mensaje = result.Error
+            });
         });
 
         //endpoints habilitacionFormulario
@@ -157,7 +212,7 @@ public class Program
 
             return Results.Ok(new
             {
-                mensaje = "Formulario actualizado correctamente."   
+                mensaje = "Formulario actualizado correctamente."
             });
         }
         );
@@ -166,7 +221,7 @@ public class Program
         {
             var result = await service.EliminarAsync(id);
 
-            if(!result.Success)
+            if (!result.Success)
             {
                 return Results.BadRequest(new
                 {
@@ -195,7 +250,7 @@ public class Program
                 mensaje = result.Error
             });
         });
-        
+
         app.Run();
     }
 }

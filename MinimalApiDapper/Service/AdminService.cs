@@ -7,6 +7,7 @@ using System.IO;
 using System.Linq;
 using MinimalApiDapper.DTO;
 using Microsoft.Data.SqlClient;
+using MinimalApiDapper.DTO.Admin;
 
 
 namespace MinimalApiDapper.Services;
@@ -60,18 +61,64 @@ public class AdminService : IAdminService
         }
     }
 
-    public Task<Result<bool>> CrearAsync(Administrador admin)
+    public async Task<Result<bool>> CrearAsync(CrearAdminDto admin)
     {
-        throw new NotImplementedException();
+        try
+        {    
+            var nuevoAdmin = new Administrador()
+            {
+                Admin_Nom_Ape = admin.Admin_Nom_Ape,
+                Admin_DNI = admin.Admin_DNI,
+                Admin_Tipo_DNI = admin.Admin_Tipo_DNI,
+                Admin_Nom_Usuario = admin.Admin_Nom_Usuario,
+                Admin_Contra = admin.Admin_Contra
+            };
+
+            await _adminRepository.CrearAsync(nuevoAdmin);
+
+            return Result<bool>.Ok(true);
+        }
+        catch(SqlException ex)
+        {
+            return Result<bool>.Fail(ex.Message); 
+        }
     }
 
-    public Task<Result<bool>> EditarAsync(Administrador admin)
+    public async Task<Result<bool>> EditarAsync(int id, EditarAdminDto admin)
     {
-        throw new NotImplementedException();
+        try
+        {
+            var nuevoAdmin = new Administrador()
+            {
+                ID_Admin = id,
+                Admin_Nom_Ape = admin.Admin_Nom_Ape,
+                Admin_DNI = admin.Admin_DNI,
+                Admin_Tipo_DNI = admin.Admin_Tipo_DNI,
+                Admin_Nom_Usuario = admin.Admin_Nom_Usuario,
+                Admin_Contra = admin.Admin_Contra
+            };
+
+            await _adminRepository.EditarAsync(nuevoAdmin);
+
+            return Result<bool>.Ok(true);
+        }
+        catch(SqlException ex)
+        {
+            return Result<bool>.Fail(ex.Message);
+        }
     }
 
-    public Task<Result<bool>> EliminarAsync(int id)
+    public async Task<Result<bool>> EliminarAsync(int id)
     {
-        throw new NotImplementedException();
+        try
+        {
+            await _adminRepository.EliminarAsync(id);
+
+            return Result<bool>.Ok(true);
+        }
+        catch(SqlException ex)
+        {
+            return Result<bool>.Fail(ex.Message);
+        }
     }
 }

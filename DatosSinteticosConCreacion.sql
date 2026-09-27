@@ -151,72 +151,518 @@ GO
    PROCEDIMIENTOS - ADMIN
    ============================================================ */
 
-CREATE PROCEDURE Agregar_Admin
-    @Admin_Nom_Ape VARCHAR(50),
-    @Admin_DNI VARCHAR(8),
-    @Admin_Tipo_DNI VARCHAR(40),
-    @Admin_Nom_Usuario VARCHAR(30),
-    @Admin_Contraseña VARCHAR(30)
+CREATE OR ALTER PROCEDURE sp_Listar_Admin
 AS
 BEGIN
-    SET NOCOUNT ON;
-
-    INSERT INTO Admins
-        (Admin_Nom_Ape, Admin_DNI, Admin_Tipo_DNI, Admin_Nom_Usuario, Admin_Contra)
-    VALUES
-        (@Admin_Nom_Ape, @Admin_DNI, @Admin_Tipo_DNI, @Admin_Nom_Usuario, @Admin_Contraseña);
-END;
+	SELECT
+		ID_Admin,
+		Admin_Nom_Ape,
+		Admin_DNI,
+		Admin_Tipo_DNI,
+		Admin_Nom_Usuario,
+		Admin_Contra
+	FROM Admins
+END
 GO
 
-CREATE PROCEDURE Eliminar_Admin
-    @ID_Admin INT,
-    @Mensaje NVARCHAR(255) OUTPUT
+CREATE OR ALTER PROCEDURE Admin_Delete
+    @ID_Admin INT
 AS
 BEGIN
     SET NOCOUNT ON;
 
+    -- ============================================================
+    -- VALIDACIÓN: ID
+    -- ============================================================
+
+    IF @ID_Admin IS NULL
+    BEGIN
+        RAISERROR(N'El ID del administrador no puede ser nulo.', 16, 1);
+        RETURN;
+    END
+
+
+    -- ============================================================
+    -- VALIDACIÓN: EXISTENCIA
+    -- ============================================================
+
+    IF NOT EXISTS
+    (
+        SELECT 1
+        FROM Admins
+        WHERE ID_Admin = @ID_Admin
+    )
+    BEGIN
+        RAISERROR(N'No existe un administrador con el ID indicado.', 16, 1);
+        RETURN;
+    END
+
+
+    -- ============================================================
+    -- NO PERMITIR ELIMINAR AL SUPER ADMIN
+    -- ============================================================
+
+    IF EXISTS
+    (
+        SELECT 1
+        FROM Admins
+        WHERE ID_Admin = @ID_Admin
+          AND Admin_Nom_Usuario = 'admin'
+          AND Admin_DNI = '00000000'
+          AND Admin_Tipo_DNI = 'DNI'
+    )
+    BEGIN
+        RAISERROR(
+            N'El super administrador no puede ser eliminado.',
+            16,
+            1
+        );
+        RETURN;
+    END
+
+
+    -- ============================================================
+    -- DELETE + CREACIÓN DEL SUPER ADMIN SI ES NECESARIO
+    -- ============================================================
+
     BEGIN TRY
-        IF EXISTS (SELECT 1 FROM Admins WHERE ID_Admin = @ID_Admin)
+
+        BEGIN TRANSACTION;
+
+        DELETE FROM Admins
+        WHERE ID_Admin = @ID_Admin;
+
+
+        -- ========================================================
+        -- SI NO QUEDAN ADMINISTRADORES,
+        -- CREAR EL SUPER ADMIN GENÉRICO
+        -- ========================================================
+
+        IF NOT EXISTS
+        (
+            SELECT 1
+            FROM Admins
+        )
         BEGIN
-            DELETE FROM Admins WHERE ID_Admin = @ID_Admin;
 
-            IF NOT EXISTS (SELECT 1 FROM Admins)
-            BEGIN
-                INSERT INTO Admins
-                    (Admin_Nom_Ape, Admin_DNI, Admin_Tipo_DNI, Admin_Nom_Usuario, Admin_Contra)
-                VALUES
-                    ('Administrador General', '00000000', 'DNI', 'admin', 'admin123456');
+            INSERT INTO Admins
+            (
+                Admin_Nom_Ape,
+                Admin_DNI,
+                Admin_Tipo_DNI,
+                Admin_Nom_Usuario,
+                Admin_Contra
+            )
+            VALUES
+            (
+                'Administrador General',
+                '00000000',
+                'DNI',
+                'admin',
+                'admin123456'
+            );
 
-                SET @Mensaje = N'Administrador eliminado. Se generó un usuario genérico (admin / admin123456).';
-            END
-            ELSE
-                SET @Mensaje = N'Administrador eliminado exitosamente.';
         END
-        ELSE
-            SET @Mensaje = N'No se encontró ningún administrador con ese ID.';
+
+        COMMIT TRANSACTION;
+
     END TRY
     BEGIN CATCH
-        SET @Mensaje = ERROR_MESSAGE();
+
+        IF @@TRANCOUNT > 0
+            ROLLBACK TRANSACTION;
+
+        RAISERROR(
+            N'Hubo un error inesperado al eliminar el administrador.',
+            16,
+            1
+        );
+
+        RETURN;
+
     END CATCH
 END;
 GO
 
-CREATE PROCEDURE Modificar_Admin
-    @Admin_Nom_Usuario VARCHAR(30),
-    @Nuevo_Admin_Nom_Ape VARCHAR(50),
-    @Nuevo_Admin_DNI VARCHAR(8),
+CREATE OR ALTER PROCEDURE Admin_Update
+    @ID_Admin                INT,
+    @Nuevo_Admin_Nom_Ape     VARCHAR(100),
+    @Nuevo_Admin_DNI         VARCHAR(8),
+    @Nuevo_Admin_Tipo_DNI    VARCHAR(40),
     @Nuevo_Admin_Nom_Usuario VARCHAR(30),
-    @Nuevo_Admin_Contra VARCHAR(30)
+    @Nuevo_Admin_Contra      VARCHAR(255)
 AS
 BEGIN
     SET NOCOUNT ON;
 
-    UPDATE Admins
-    SET Admin_Nom_Ape = @Nuevo_Admin_Nom_Ape,
-        Admin_DNI = @Nuevo_Admin_DNI,
-        Admin_Nom_Usuario = @Nuevo_Admin_Nom_Usuario,
-        Admin_Contra = @Nuevo_Admin_Contra
-    WHERE Admin_Nom_Usuario = @Admin_Nom_Usuario;
+    -- ============================================================
+    -- VALIDACIÓN: ID
+    -- ============================================================
+
+    IF @ID_Admin IS NULL
+    BEGIN
+        RAISERROR(N'El ID del administrador no puede ser nulo.', 16, 1);
+        RETURN;
+    END
+
+    IF NOT EXISTS
+    (
+        SELECT 1
+        FROM Admins
+        WHERE ID_Admin = @ID_Admin
+    )
+    BEGIN
+        RAISERROR(N'No existe un administrador con el ID indicado.', 16, 1);
+        RETURN;
+    END
+
+
+    -- ============================================================
+    -- VALIDACIÓN: CAMPOS OBLIGATORIOS
+    -- ============================================================
+
+    IF @Nuevo_Admin_Nom_Ape IS NULL
+       OR LTRIM(RTRIM(@Nuevo_Admin_Nom_Ape)) = ''
+    BEGIN
+        RAISERROR(N'El nombre y apellido no pueden ser nulos ni estar vacíos.', 16, 1);
+        RETURN;
+    END
+
+    IF @Nuevo_Admin_DNI IS NULL
+       OR LTRIM(RTRIM(@Nuevo_Admin_DNI)) = ''
+    BEGIN
+        RAISERROR(N'El DNI no puede ser nulo ni estar vacío.', 16, 1);
+        RETURN;
+    END
+
+    IF @Nuevo_Admin_Tipo_DNI IS NULL
+       OR LTRIM(RTRIM(@Nuevo_Admin_Tipo_DNI)) = ''
+    BEGIN
+        RAISERROR(N'El tipo de DNI no puede ser nulo ni estar vacío.', 16, 1);
+        RETURN;
+    END
+
+    IF @Nuevo_Admin_Nom_Usuario IS NULL
+       OR LTRIM(RTRIM(@Nuevo_Admin_Nom_Usuario)) = ''
+    BEGIN
+        RAISERROR(N'El nombre de usuario no puede ser nulo ni estar vacío.', 16, 1);
+        RETURN;
+    END
+
+    IF @Nuevo_Admin_Contra IS NULL
+       OR LTRIM(RTRIM(@Nuevo_Admin_Contra)) = ''
+    BEGIN
+        RAISERROR(N'La contraseña no puede ser nula ni estar vacía.', 16, 1);
+        RETURN;
+    END
+
+
+    -- ============================================================
+    -- VALIDACIÓN: LONGITUD
+    -- ============================================================
+
+    IF LEN(@Nuevo_Admin_Nom_Ape) > 100
+    BEGIN
+        RAISERROR(N'El largo del nombre y apellido informado es superior al permitido (100 caracteres).', 16, 1);
+        RETURN;
+    END
+
+    IF LEN(@Nuevo_Admin_DNI) > 8
+    BEGIN
+        RAISERROR(N'El largo del DNI informado es superior al permitido (8 caracteres).', 16, 1);
+        RETURN;
+    END
+
+    IF LEN(@Nuevo_Admin_Tipo_DNI) > 40
+    BEGIN
+        RAISERROR(N'El largo del tipo de DNI informado es superior al permitido (40 caracteres).', 16, 1);
+        RETURN;
+    END
+
+    IF LEN(@Nuevo_Admin_Nom_Usuario) > 30
+    BEGIN
+        RAISERROR(N'El largo del nombre de usuario informado es superior al permitido (30 caracteres).', 16, 1);
+        RETURN;
+    END
+
+    IF LEN(@Nuevo_Admin_Contra) > 255
+    BEGIN
+        RAISERROR(N'El largo de la contraseña informada es superior al permitido (255 caracteres).', 16, 1);
+        RETURN;
+    END
+
+
+    -- ============================================================
+    -- RESERVA DEL SUPER ADMIN
+    -- ============================================================
+
+    IF LOWER(LTRIM(RTRIM(@Nuevo_Admin_Nom_Usuario))) = 'admin'
+    BEGIN
+        RAISERROR(
+            N'El nombre de usuario "admin" está reservado para el super administrador.',
+            16,
+            1
+        );
+        RETURN;
+    END
+
+    IF LTRIM(RTRIM(@Nuevo_Admin_DNI)) = '00000000'
+       AND UPPER(LTRIM(RTRIM(@Nuevo_Admin_Tipo_DNI))) = 'DNI'
+    BEGIN
+        RAISERROR(
+            N'El DNI 00000000 está reservado para el super administrador.',
+            16,
+            1
+        );
+        RETURN;
+    END
+
+
+    -- ============================================================
+    -- VALIDACIÓN: DNI + TIPO DE DNI
+    -- ============================================================
+
+    IF EXISTS
+    (
+        SELECT 1
+        FROM Admins
+        WHERE Admin_DNI = @Nuevo_Admin_DNI
+          AND Admin_Tipo_DNI = @Nuevo_Admin_Tipo_DNI
+          AND ID_Admin <> @ID_Admin
+    )
+    BEGIN
+        RAISERROR(
+            N'Ya existe otro administrador con ese DNI y tipo de DNI.',
+            16,
+            1
+        );
+        RETURN;
+    END
+
+
+    -- ============================================================
+    -- VALIDACIÓN: USUARIO
+    -- ============================================================
+
+    IF EXISTS
+    (
+        SELECT 1
+        FROM Admins
+        WHERE Admin_Nom_Usuario = @Nuevo_Admin_Nom_Usuario
+          AND ID_Admin <> @ID_Admin
+    )
+    BEGIN
+        RAISERROR(
+            N'El nombre de usuario ingresado ya pertenece a otro administrador.',
+            16,
+            1
+        );
+        RETURN;
+    END
+
+
+    -- ============================================================
+    -- UPDATE
+    -- ============================================================
+
+    BEGIN TRY
+
+        UPDATE Admins
+        SET
+            Admin_Nom_Ape = @Nuevo_Admin_Nom_Ape,
+            Admin_DNI = @Nuevo_Admin_DNI,
+            Admin_Tipo_DNI = @Nuevo_Admin_Tipo_DNI,
+            Admin_Nom_Usuario = @Nuevo_Admin_Nom_Usuario,
+            Admin_Contra = @Nuevo_Admin_Contra
+        WHERE ID_Admin = @ID_Admin;
+
+    END TRY
+    BEGIN CATCH
+
+        RAISERROR(
+            N'Hubo un error inesperado al modificar el administrador.',
+            16,
+            1
+        );
+        RETURN;
+
+    END CATCH
+END;
+GO
+
+CREATE OR ALTER PROCEDURE Agregar_Admin
+    @Admin_Nom_Ape      VARCHAR(100),
+    @Admin_DNI          VARCHAR(8),
+    @Admin_Tipo_DNI     VARCHAR(40),
+    @Admin_Nom_Usuario  VARCHAR(30),
+    @Admin_Contraseña   VARCHAR(255)
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    -- ============================================================
+    -- VALIDACIÓN: CAMPOS OBLIGATORIOS
+    -- ============================================================
+
+    IF @Admin_Nom_Ape IS NULL OR LTRIM(RTRIM(@Admin_Nom_Ape)) = ''
+    BEGIN
+        RAISERROR(N'El nombre y apellido no pueden ser nulos ni estar vacíos.', 16, 1);
+        RETURN;
+    END
+
+    IF @Admin_DNI IS NULL OR LTRIM(RTRIM(@Admin_DNI)) = ''
+    BEGIN
+        RAISERROR(N'El DNI no puede ser nulo ni estar vacío.', 16, 1);
+        RETURN;
+    END
+
+    IF @Admin_Tipo_DNI IS NULL OR LTRIM(RTRIM(@Admin_Tipo_DNI)) = ''
+    BEGIN
+        RAISERROR(N'El tipo de DNI no puede ser nulo ni estar vacío.', 16, 1);
+        RETURN;
+    END
+
+    IF @Admin_Nom_Usuario IS NULL OR LTRIM(RTRIM(@Admin_Nom_Usuario)) = ''
+    BEGIN
+        RAISERROR(N'El nombre de usuario no puede ser nulo ni estar vacío.', 16, 1);
+        RETURN;
+    END
+
+    IF @Admin_Contraseña IS NULL OR LTRIM(RTRIM(@Admin_Contraseña)) = ''
+    BEGIN
+        RAISERROR(N'La contraseña no puede ser nula ni estar vacía.', 16, 1);
+        RETURN;
+    END
+
+
+    -- ============================================================
+    -- VALIDACIÓN: LONGITUD
+    -- ============================================================
+
+    IF LEN(@Admin_Nom_Ape) > 100
+    BEGIN
+        RAISERROR(N'El largo del nombre y apellido informado es superior al permitido (100 caracteres).', 16, 1);
+        RETURN;
+    END
+
+    IF LEN(@Admin_DNI) > 8
+    BEGIN
+        RAISERROR(N'El largo del DNI informado es superior al permitido (8 caracteres).', 16, 1);
+        RETURN;
+    END
+
+    IF LEN(@Admin_Tipo_DNI) > 40
+    BEGIN
+        RAISERROR(N'El largo del tipo de DNI informado es superior al permitido (40 caracteres).', 16, 1);
+        RETURN;
+    END
+
+    IF LEN(@Admin_Nom_Usuario) > 30
+    BEGIN
+        RAISERROR(N'El largo del nombre de usuario informado es superior al permitido (30 caracteres).', 16, 1);
+        RETURN;
+    END
+
+    IF LEN(@Admin_Contraseña) > 255
+    BEGIN
+        RAISERROR(N'El largo de la contraseña informada es superior al permitido (255 caracteres).', 16, 1);
+        RETURN;
+    END
+
+
+    -- ============================================================
+    -- RESERVA DEL SUPER ADMIN
+    -- ============================================================
+
+    IF LOWER(LTRIM(RTRIM(@Admin_Nom_Usuario))) = 'admin'
+    BEGIN
+        RAISERROR(
+            N'El nombre de usuario "admin" está reservado para el super administrador.',
+            16,
+            1
+        );
+        RETURN;
+    END
+
+    IF LTRIM(RTRIM(@Admin_DNI)) = '00000000'
+       AND UPPER(LTRIM(RTRIM(@Admin_Tipo_DNI))) = 'DNI'
+    BEGIN
+        RAISERROR(
+            N'El DNI 00000000 está reservado para el super administrador.',
+            16,
+            1
+        );
+        RETURN;
+    END
+
+
+    -- ============================================================
+    -- VALIDACIÓN: DNI + TIPO DE DNI ÚNICOS
+    -- ============================================================
+
+    IF EXISTS
+    (
+        SELECT 1
+        FROM Admins
+        WHERE Admin_DNI = @Admin_DNI
+          AND Admin_Tipo_DNI = @Admin_Tipo_DNI
+    )
+    BEGIN
+        RAISERROR(N'Ya existe un administrador con ese DNI y tipo de DNI.', 16, 1);
+        RETURN;
+    END
+
+
+    -- ============================================================
+    -- VALIDACIÓN: USUARIO ÚNICO
+    -- ============================================================
+
+    IF EXISTS
+    (
+        SELECT 1
+        FROM Admins
+        WHERE Admin_Nom_Usuario = @Admin_Nom_Usuario
+    )
+    BEGIN
+        RAISERROR(N'El nombre de usuario ingresado ya existe.', 16, 1);
+        RETURN;
+    END
+
+
+    -- ============================================================
+    -- INSERT
+    -- ============================================================
+
+    BEGIN TRY
+
+        INSERT INTO Admins
+        (
+            Admin_Nom_Ape,
+            Admin_DNI,
+            Admin_Tipo_DNI,
+            Admin_Nom_Usuario,
+            Admin_Contra
+        )
+        VALUES
+        (
+            @Admin_Nom_Ape,
+            @Admin_DNI,
+            @Admin_Tipo_DNI,
+            @Admin_Nom_Usuario,
+            @Admin_Contraseña
+        );
+
+    END TRY
+    BEGIN CATCH
+
+        RAISERROR(
+            N'Hubo un error inesperado al insertar el administrador.',
+            16,
+            1
+        );
+        RETURN;
+
+    END CATCH
 END;
 GO
 
@@ -748,12 +1194,16 @@ GO
    ============================================================ */
 
 -- Administrador para probar el login
-EXEC Agregar_Admin
-    'Administrador General',
-    '00000001',
+INSERT INTO Admins(Admin_Nom_Ape,
+	Admin_DNI,
+	Admin_Tipo_DNI,
+	Admin_Nom_Usuario,
+	Admin_Contra)
+VALUES ('Administrador General',
+    '00000000',
     'DNI',
     'Admin',
-    '1142';
+    '1142')
 GO
 
 -- Países
