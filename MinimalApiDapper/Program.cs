@@ -34,6 +34,7 @@ public class Program
         string connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
         //string de conexion a la base de datos. Recuerden cambiar el nombre del servidor y la base de datos para que el proyecto funcione
 
+        
         // Add database connection string to the services
         builder.Services.AddSingleton<AdminRepository>(_ => new
         AdminRepository(connectionString));
@@ -83,7 +84,11 @@ public class Program
             {
                 mensaje = result.Error
             });
-        });
+        })
+        .WithTags("Administradores")
+        .WithSummary("Listado administradores")
+        .WithDescription("Devuelve un listado de todos los administradores registrados en el sistema")
+        .WithOpenApi();
 
         app.MapPost("/api/admin/login", async (AdminLoginRequestDto data, IAdminService service) =>
         {
@@ -95,7 +100,11 @@ public class Program
             }
 
             return Results.BadRequest(new { mensaje = result.Error });
-        });
+        })
+        .WithTags("Administradores")
+        .WithSummary("Logueo del admin")
+        .WithDescription("Realiza el login del admin")
+        .WithOpenApi();
 
         app.MapGet("/api/admin/exportar-estudiantes", async (IAdminService service) =>
         {
@@ -107,7 +116,11 @@ public class Program
             }
 
             return Results.BadRequest(new { message = result.Error });
-        });
+        })
+        .WithTags("Administradores")
+        .WithSummary("Excel de inscripciones")
+        .WithDescription("Devuelve un listado con todas las inscripiones hasta la fecha actual")
+        .WithOpenApi();
 
         app.MapPost("/api/admin", async (CrearAdminDto admin, IAdminService service) =>
         {
@@ -125,7 +138,11 @@ public class Program
             {
                 mensaje = result.Error
             });
-        });
+        })
+        .WithTags("Administradores")
+        .WithSummary("Alta administrador")
+        .WithDescription("Registra un nuevo administrador en el sistema")
+        .WithOpenApi();
 
         app.MapPut("/api/admin/{id}", async (int id, EditarAdminDto admin, IAdminService service) =>
         {
@@ -143,7 +160,11 @@ public class Program
             {
                 mensaje = result.Error
             });
-        });
+        })
+        .WithTags("Administradores")
+        .WithSummary("Editar administrador")
+        .WithDescription("Actualiza los datos del administrador mediante su ID")
+        .WithOpenApi();
 
         app.MapDelete("/api/admin/{id}", async (int id, IAdminService service) =>
         {
@@ -161,10 +182,14 @@ public class Program
             {
                 mensaje = result.Error
             });
-        });
+        })
+        .WithTags("Administradores")
+        .WithSummary("Eliminar admin")
+        .WithDescription("Elimina a un administrador del sistema actual mediante su ID")
+        .WithOpenApi();
 
         //endpoints habilitacionFormulario
-        app.MapGet("/api/habilitacion-formulario", async (IHabilitacionFormularioService service) =>
+        app.MapGet("/api/formularios", async (IHabilitacionFormularioService service) =>
         {
             var result = await service.GetAllAsync();
 
@@ -177,9 +202,13 @@ public class Program
             {
                 mensaje = result.Error
             });
-        });
+        })
+        .WithTags("Formularios")
+        .WithSummary("Listado de formularios")
+        .WithDescription("Devuelve un listado con todos los formularios en el sistema")
+        .WithOpenApi();
 
-        app.MapPost("/api/admin/formularios", async (CrearHabilitacionFormularioDto data, IHabilitacionFormularioService service) =>
+        app.MapPost("/api/formularios", async (CrearHabilitacionFormularioDto data, IHabilitacionFormularioService service) =>
         {
             var result = await service.CrearAsync(data);
 
@@ -196,9 +225,13 @@ public class Program
                 mensaje = "Formulario creado correctamente."
             });
         }
-        );
+        )
+        .WithTags("Formularios")
+        .WithSummary("Alta formulario")
+        .WithDescription("Crea un nuevo formulario en el sistema")
+        .WithOpenApi();
 
-        app.MapPut("/api/admin/formularios/{id}", async (int id, EditarHabilitacionFormularioDto data, IHabilitacionFormularioService service) =>
+        app.MapPut("/api/formularios/{id}", async (int id, EditarHabilitacionFormularioDto data, IHabilitacionFormularioService service) =>
         {
             var result = await service.EditarAsync(id, data);
 
@@ -215,9 +248,13 @@ public class Program
                 mensaje = "Formulario actualizado correctamente."
             });
         }
-        );
+        )
+        .WithTags("Formularios")
+        .WithSummary("Editar formulario")
+        .WithDescription("Actualiza los datos de un formulario del sistema mediante su id")
+        .WithOpenApi();
 
-        app.MapDelete("/api/admin/formularios/{id}", async (int id, IHabilitacionFormularioService service) =>
+        app.MapDelete("/api/formularios/{id}", async (int id, IHabilitacionFormularioService service) =>
         {
             var result = await service.EliminarAsync(id);
 
@@ -234,7 +271,11 @@ public class Program
                 mensaje = "Formulario eliminado correctamente."
             });
         }
-        );
+        )
+        .WithTags("Formularios")
+        .WithSummary("Eliminar formulario")
+        .WithDescription("Elimina un formulario del sistema mediante su ID")
+        .WithOpenApi();
 
         app.MapGet("/api/formulario/disponibilidad", async (IHabilitacionFormularioService service) =>
         {
@@ -249,7 +290,11 @@ public class Program
             {
                 mensaje = result.Error
             });
-        });
+        })
+        .WithTags("Formularios")
+        .WithSummary("Obtener formulario activo")
+        .WithDescription("Devuelve el formulario que se encuentra activo por ciclo de inscripcion o por su campo de habilitacion")
+        .WithOpenApi();
 
         app.Run();
     }
